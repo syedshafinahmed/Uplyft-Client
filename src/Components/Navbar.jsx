@@ -4,11 +4,11 @@ import { NavLink } from 'react-router';
 const Navbar = () => {
   const links =
     <>
-      <li><NavLink className='text-indigo-600 font-medium' to='/'>Home</NavLink></li>
-      <li><NavLink className='text-indigo-600 font-medium' to='/upcoming-events'>Upcoming Events</NavLink></li>
-      <li><NavLink className='text-indigo-600 font-medium' to='/joined-events'>Joined Events</NavLink></li>
-      <li><NavLink className='text-indigo-600 font-medium' to='/manage-events'>Manage Events</NavLink></li>
-      <li><NavLink className='text-indigo-600 font-medium' to='/create-events'>Create Events</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/upcoming-events'>Upcoming Events</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/manage-events'>Manage Events</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-events'>Create Events</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">
@@ -28,10 +28,10 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <a className="text-3xl font-semibold tracking-tight md:font-black bg-linear-to-r from-indigo-800 to-indigo-500 bg-clip-text text-transparent">
+            <a className="text-3xl font-semibold tracking-tight md:font-black">
               <div className='flex'>
-                <RiCommunityFill size={40} className='text-indigo-700' />
-                <span>Uplyft</span>
+                <RiCommunityFill size={40} className='text-indigo-600' />
+                <span className='bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent'>Uplyft</span>
               </div>
             </a>
           </div>
@@ -41,8 +41,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-            <NavLink to='/login'><button className='btn text-white text-xs w-20 bg-linear-to-r from-indigo-800 to-indigo-500'>Login</button></NavLink>
-            <NavLink to='/register'><button className='btn text-white text-xs w-20 bg-linear-to-r from-indigo-800 to-indigo-500'>Register</button></NavLink>
+            <NavLink to='/login'><button className='btn text-white text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
+            <NavLink to='/register'><button className='btn text-white text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
           </div>
         </div>
       </div>
