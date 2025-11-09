@@ -14,7 +14,7 @@ const Banner = () => {
         initial={{ opacity: 0, scale: 0.9, y: -20 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}
         transition={{ duration: 0.8 }}
-        className="w-40 md:w-72 mb-5 drop-shadow-lg"
+        className="w-56 md:w-72 mb-5 drop-shadow-lg"
       />
       <motion.h1
         initial={{ opacity: 0, y: 30 }}
