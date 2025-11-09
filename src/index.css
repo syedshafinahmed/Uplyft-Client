@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+* {
+  font-family: "Quicksand", sans-serif;
+}
 
 li .active {
   color: #4338CA;

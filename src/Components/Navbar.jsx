@@ -28,10 +28,10 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <a className="text-3xl font-semibold tracking-tight md:font-black">
+            <a>
               <div className='flex'>
                 <RiCommunityFill size={40} className='text-indigo-600' />
-                <span className='bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent'>Uplyft</span>
+                <NavLink to='/'><span className='bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent text-4xl font-black'>Uplyft</span></NavLink>
               </div>
             </a>
           </div>
