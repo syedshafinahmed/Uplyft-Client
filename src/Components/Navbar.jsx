@@ -8,7 +8,7 @@ const Navbar = () => {
       <li><NavLink className='text-violet-500 font-medium text-base' to='/upcoming-events'>Upcoming Events</NavLink></li>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/manage-events'>Manage Events</NavLink></li>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-events'>Create Events</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-event'>Create Event</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">
@@ -28,12 +28,12 @@ const Navbar = () => {
                 {links}
               </ul>
             </div>
-            <a>
+            <div>
               <div className='flex'>
                 <RiCommunityFill size={40} className='text-indigo-600' />
                 <NavLink to='/'><span className='bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent text-4xl font-black'>Uplyft</span></NavLink>
               </div>
-            </a>
+            </div>
           </div>
           <div className="hidden lg:flex">
             <ul className="menu menu-horizontal px-1 font-bold">
@@ -41,8 +41,8 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-            <NavLink to='/login'><button className='btn text-white text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
-            <NavLink to='/register'><button className='btn text-white text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
+            <NavLink to='/login'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
+            <NavLink to='/register'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
           </div>
         </div>
       </div>

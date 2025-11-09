@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         element: <UpcomingEvents></UpcomingEvents>
       },
       {
-        path: '/create-events',
+        path: '/create-event',
         element: <CreateEvents></CreateEvents>
       },
       {
@@ -49,7 +49,7 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
-      
+
     ]
   },
 ]);
