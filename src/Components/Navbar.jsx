@@ -30,8 +30,8 @@ const Navbar = () => {
             </div>
             <div>
               <div className='flex'>
-                <RiCommunityFill size={40} className='text-indigo-600' />
-                <NavLink to='/'><span className='bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent text-4xl font-black'>Uplyft</span></NavLink>
+                <RiCommunityFill size={40} className='text-indigo-800' />
+                <NavLink to='/'><span className='bg-linear-to-b from-indigo-800 to-indigo-800 bg-clip-text text-transparent text-4xl font-black'>Uplyft</span></NavLink>
               </div>
             </div>
           </div>

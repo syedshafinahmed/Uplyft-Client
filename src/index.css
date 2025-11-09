@@ -9,3 +9,7 @@ li .active {
   color: #4338CA;
   font-weight: 800;
 }
+
+.slider .swiper-pagination-bullet-active {
+  background-color: #4338CA !important;
+}
