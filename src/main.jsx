@@ -11,6 +11,7 @@ import ManageEvents from './Components/ManageEvents.jsx';
 import JoinedEvents from './Components/JoinedEvents.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
+import AuthProvider from './context/AuthProvider.jsx';
 
 const router = createBrowserRouter([
   {
@@ -57,6 +58,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>,
 )

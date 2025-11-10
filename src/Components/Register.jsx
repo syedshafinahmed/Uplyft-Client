@@ -10,14 +10,14 @@ const Register = () => {
           <h1 className='text-[26px] pb-2 text-center font-black bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent'>Unite, Upgrade, Uplyft.</h1>
           <fieldset className="fieldset">
             <label className="label">Name</label>
-            <input type="text" className="input rounded-full" placeholder="Name" />
+            <input type="text" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Name" />
             <label className="label">Email</label>
-            <input type="email" className="input rounded-full" placeholder="Email" />
+            <input type="email" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Email" />
             <label className="label">Photo URL</label>
-            <input type="text" className="input rounded-full" placeholder="Photo URL" />
+            <input type="text" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Photo URL" />
             <label className="label">Password</label>
             <div className="relative">
-              <input type={showPassword ? "text" : "password"} className="input rounded-full" placeholder="Password" />
+              <input type={showPassword ? "text" : "password"} className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Password" />
               <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-indigo-800">
                 {showPassword ? (
                   <PiEyeSlashDuotone size={15} />
