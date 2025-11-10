@@ -10,9 +10,14 @@
   font-family: "Quicksand", sans-serif;
 }
 
+.text-outline-white {
+  text-shadow: 1 1 2px #ffffff;
+}
+
+
 li .active {
-  color: #4338CA;
-  font-weight: 800;
+  border: 1px solid #4338CA;
+  border-radius: 9999px;
 }
 
 .slider .swiper-pagination-bullet-active {

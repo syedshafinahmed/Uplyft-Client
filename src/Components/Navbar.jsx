@@ -18,8 +18,8 @@ const Navbar = () => {
   }, [theme])
   const links =
     <>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/'>Home</NavLink></li>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/upcoming-events'>Upcoming Events</NavLink></li>
+      <li><NavLink className='text-indigo-800 font-bold text-base text-outline-white' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-indigo-800 font-bold text-base text-outline-white' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">
@@ -47,7 +47,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden lg:flex">
-            <ul className="menu menu-horizontal px-1 font-bold">
+            <ul className="menu menu-horizontal gap-3 px-1 font-bold">
               {links}
             </ul>
           </div>
