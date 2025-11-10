@@ -52,7 +52,8 @@ const Features = () => {
             key={index}
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.05 }}
+            // transition={{ duration: 0.6 }}
             className="bg-violet-200 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
           >
             <div className="flex flex-col items-center">

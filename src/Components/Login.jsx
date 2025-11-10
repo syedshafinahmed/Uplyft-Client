@@ -85,11 +85,11 @@ const Login = () => {
           <form onSubmit={handleLogIn}>
             <fieldset className="fieldset">
               <label className="label">Email</label>
-              <input type="email" name="email" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Email" required/>
+              <input type="email" name="email" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Email" required />
 
               <label className="label">Password</label>
               <div className="relative">
-                <input type={showPassword ? "text" : "password"} name="password" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Password" required/>
+                <input type={showPassword ? "text" : "password"} name="password" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Password" required />
                 <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-indigo-800">
                   {showPassword ? (
                     <PiEyeSlashDuotone size={15} />
@@ -107,7 +107,7 @@ const Login = () => {
                 </div>
               </button>
 
-              <button className="btn rounded-full text-base bg-linear-to-b from-indigo-800 to-violet-500 text-white mt-3">Login</button>
+              <button className="btn rounded-full text-base bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 mt-3">Login</button>
               <p className='mt-2 text-center'>Don't have an account? <NavLink to='/register' className='text-indigo-800 font-bold'>Register</NavLink></p>
             </fieldset>
           </form>

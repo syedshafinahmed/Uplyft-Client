@@ -85,7 +85,7 @@ const Register = () => {
                 </button>
               </div>
 
-              <button className="btn rounded-full text-base bg-linear-to-b from-indigo-800 to-violet-500 text-white mt-3">Register</button>
+              <button className="btn rounded-full text-base bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 mt-3">Register</button>
               {passwordError && (
                 <p className="text-red-600 text-sm mt-2 text-center font-medium">
                   {passwordError}

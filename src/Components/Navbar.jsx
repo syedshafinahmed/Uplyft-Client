@@ -103,15 +103,15 @@ const Navbar = () => {
                           });
                         })
                     }
-                    className="btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500"
+                    className="btn text-base-200 rounded-full text-xs font-bold w-20 bg-linear-to-b from-indigo-800 to-violet-500"
                   >
                     Logout
                   </button>
                 </div>
                 ) :
                 (<div className="flex items-center gap-3">
-                  <NavLink to='/login'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
-                  <NavLink to='/register'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
+                  <NavLink to='/login'><button className='btn text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
+                  <NavLink to='/register'><button className='btn text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
                 </div>)
             }
           </div>
