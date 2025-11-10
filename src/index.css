@@ -16,8 +16,11 @@
 
 
 li .active {
-  border: 1px solid #4338CA;
+  /* border: 1px solid #4338CA;
   border-radius: 9999px;
+  background-color: #4338CA;
+  color: var(--b2); */
+  @apply text-base-200 rounded-full bg-linear-to-b from-indigo-800 to-violet-500 px-5
 }
 
 .slider .swiper-pagination-bullet-active {

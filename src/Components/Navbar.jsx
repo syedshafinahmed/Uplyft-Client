@@ -18,12 +18,12 @@ const Navbar = () => {
   }, [theme])
   const links =
     <>
-      <li><NavLink className='text-indigo-800 font-bold text-base text-outline-white' to='/'>Home</NavLink></li>
-      <li><NavLink className='text-indigo-800 font-bold text-base text-outline-white' to='/upcoming-events'>Upcoming Events</NavLink></li>
+      <li><NavLink className='text-indigo-800 font-bold text-sm text-outline-white' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-indigo-800 font-bold text-sm text-outline-white' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">
-      <div className="backdrop-blur-lg border-b border-white/10 shadow-sm py-3 px-4 md:px-8">
+      <div className="backdrop-blur-lg  shadow-sm py-3 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="dropdown relative lg:hidden">
@@ -103,15 +103,15 @@ const Navbar = () => {
                           });
                         })
                     }
-                    className="btn text-base-200 rounded-full text-xs font-bold w-20 bg-linear-to-b from-indigo-800 to-violet-500"
+                    className="btn text-base-200 rounded-full border-none text-xs font-bold w-20 bg-linear-to-b from-indigo-800 to-violet-500"
                   >
                     Logout
                   </button>
                 </div>
                 ) :
                 (<div className="flex items-center gap-3">
-                  <NavLink to='/login'><button className='btn text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
-                  <NavLink to='/register'><button className='btn text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
+                  <NavLink to='/login'><button className='btn border-none font-bold text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
+                  <NavLink to='/register'><button className='btn border-none font-bold text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
                 </div>)
             }
           </div>

@@ -62,7 +62,7 @@ const Register = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div data-aos="fade-up" className="card bg-violet-50 w-full border-2 border-indigo-800 max-w-sm shrink-0 shadow-2xl">
+      <div data-aos="fade-up" className="card bg-base-200 w-full border-2 border-indigo-800 max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
           <h1 className='text-[26px] pb-2 text-center font-black bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent'>Unite, Upgrade, Uplyft.</h1>
           <form onSubmit={handleRegister}>
