@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
-import AOS from 'aos';
-import "aos/dist/aos.css";
+// import AOS from 'aos';
+// import "aos/dist/aos.css";
 const Newsletter = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000, once: false, easing: "ease-in-out" });
-    setTimeout(() => AOS.refresh(), 100);
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({ duration: 1000, once: false, easing: "ease-in-out" });
+  //   setTimeout(() => AOS.refresh(), 100);
+  // }, []);
   return (
     <section className="py-20 px-6 bg-violet-50 flex justify-center">
       <div data-aos="fade-up" className="bg-white rounded-3xl shadow-2xl p-20 max-w-3xl w-full text-center border-2 border-indigo-800">
