@@ -1,14 +1,17 @@
-import React from 'react';
+import React, { use } from 'react';
 import { RiCommunityFill } from 'react-icons/ri';
 import { NavLink } from 'react-router';
+import { AuthContext } from '../context/AuthContext';
+import Swal from 'sweetalert2';
 const Navbar = () => {
+  const { user, signOutUser } = use(AuthContext);
   const links =
     <>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/'>Home</NavLink></li>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/upcoming-events'>Upcoming Events</NavLink></li>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
+      {/* <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/manage-events'>Manage Events</NavLink></li>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-event'>Create Event</NavLink></li>
+      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-event'>Create Event</NavLink></li> */}
     </>
   return (
     <div className="sticky top-0 w-full z-50">
@@ -41,8 +44,62 @@ const Navbar = () => {
             </ul>
           </div>
           <div className="flex items-center gap-3">
-            <NavLink to='/login'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
-            <NavLink to='/register'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
+            {
+              user ?
+                (<div className="flex items-center gap-3">
+                  <div className="dropdown dropdown-end">
+                    <label
+                      tabIndex={0}
+                      className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-primary"
+                      data-tip={user.displayName || "User"}
+                    >
+                      <div className="w-10 rounded-full border-2 border-indigo-800">
+                        <img src={user.photoURL || "https://via.placeholder.com/150"} referrerPolicy="no-referrer" alt="User" />
+                      </div>
+                    </label>
+
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content menu p-2 shadow bg-white rounded-box w-40 text-sm"
+                    >
+                      <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-base' to='/manage-events'>Manage Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-event'>Create Event</NavLink></li>
+                    </ul>
+                  </div>
+
+                  <button
+                    onClick={() =>
+                      signOutUser()
+                        .then(() => {
+                          Swal.fire({
+                            icon: 'success',
+                            title: 'Logged Out!',
+                            text: 'You have successfully logged out.',
+                            timer: 2000,
+                            showConfirmButton: false,
+                          });
+                          console.log("Logged out");
+                        })
+                        .catch(err => {
+                          Swal.fire({
+                            icon: 'error',
+                            title: 'Logout Failed!',
+                            text: err.message,
+                          });
+                        })
+                    }
+                    className="btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500"
+                  >
+                    Logout
+                  </button>
+                </div>
+                ) :
+                (<div className="flex items-center gap-3">
+                  <NavLink to='/login'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
+                  <NavLink to='/register'><button className='btn text-white rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
+                </div>)
+            }
           </div>
         </div>
       </div>
