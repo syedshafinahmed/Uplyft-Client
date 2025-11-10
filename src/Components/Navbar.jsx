@@ -9,13 +9,10 @@ const Navbar = () => {
     <>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/'>Home</NavLink></li>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/upcoming-events'>Upcoming Events</NavLink></li>
-      {/* <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/manage-events'>Manage Events</NavLink></li>
-      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-event'>Create Event</NavLink></li> */}
     </>
   return (
     <div className="sticky top-0 w-full z-50">
-      <div className="bg-gray-200 backdrop-blur-lg border-b border-white/10 shadow-sm py-3 px-4 md:px-8">
+      <div className="bg-violet-50 backdrop-blur-lg border-b border-white/10 shadow-sm py-3 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="dropdown relative lg:hidden">

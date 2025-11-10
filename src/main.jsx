@@ -12,6 +12,7 @@ import JoinedEvents from './Components/JoinedEvents.jsx';
 import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import AuthProvider from './context/AuthProvider.jsx';
+import PrivateRoute from './privateroute/PrivateRoute.jsx';
 
 const router = createBrowserRouter([
   {
@@ -32,15 +33,15 @@ const router = createBrowserRouter([
       },
       {
         path: '/create-event',
-        element: <CreateEvents></CreateEvents>
+        element: <PrivateRoute><CreateEvents></CreateEvents></PrivateRoute>
       },
       {
         path: '/manage-events',
-        element: <ManageEvents></ManageEvents>
+        element: <PrivateRoute><ManageEvents></ManageEvents></PrivateRoute>
       },
       {
         path: '/joined-events',
-        element: <JoinedEvents></JoinedEvents>
+        element: <PrivateRoute><JoinedEvents></JoinedEvents></PrivateRoute>
       },
       {
         path: '/login',
