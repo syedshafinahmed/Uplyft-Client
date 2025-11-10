@@ -13,7 +13,7 @@ const images = [event1, event2, event3, event4];
 
 const Gallery = () => {
   return (
-    <section className="gallery-section py-20 px-6 bg-violet-50 text-center">
+    <section className="gallery-section py-20 px-6 text-center">
       <h2 className="text-3xl md:text-5xl font-bold text-indigo-800 mb-6">
         Event Gallery
       </h2>

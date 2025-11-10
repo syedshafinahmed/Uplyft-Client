@@ -7,8 +7,8 @@ const Newsletter = () => {
   //   setTimeout(() => AOS.refresh(), 100);
   // }, []);
   return (
-    <section className="py-20 px-6 bg-violet-50 flex justify-center">
-      <div data-aos="fade-up" className="bg-white rounded-3xl shadow-2xl p-20 max-w-3xl w-full text-center border-2 border-indigo-800">
+    <section className="py-20 px-6 flex justify-center">
+      <div data-aos="fade-up" className="bg-violet-200 rounded-3xl shadow-2xl p-20 max-w-3xl w-full text-center border-2 border-indigo-800">
         <h2 className="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Stay Updated!</h2>
         <p className="text-gray-800 mb-8">Subscribe to our newsletter and never miss upcoming events and community updates.</p>
         <div className="flex flex-col sm:flex-row justify-center items-center gap-4">

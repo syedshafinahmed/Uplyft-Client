@@ -27,7 +27,7 @@ const features = [
 
 const Features = () => {
   return (
-    <section className="py-20 px-6 bg-linear-to-b from-white to-violet-50 text-center">
+    <section className="py-20 px-6 text-center">
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -53,7 +53,7 @@ const Features = () => {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
+            className="bg-violet-200 p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all"
           >
             <div className="flex flex-col items-center">
               {feature.icon}

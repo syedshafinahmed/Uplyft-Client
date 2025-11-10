@@ -1,10 +1,21 @@
-import React, { use } from 'react';
+import React, { use, useEffect, useState } from 'react';
 import { RiCommunityFill } from 'react-icons/ri';
 import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import Swal from 'sweetalert2';
+import Switch from '../toggle/Switch';
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || "light")
+  const handleTheme = (checked) => {
+    setTheme(checked ? "dark" : "light")
+  }
+
+  useEffect(() => {
+    const html = document.querySelector('html')
+    html.setAttribute("data-theme", theme)
+    localStorage.setItem("theme", theme)
+  }, [theme])
   const links =
     <>
       <li><NavLink className='text-violet-500 font-medium text-base' to='/'>Home</NavLink></li>
@@ -12,7 +23,7 @@ const Navbar = () => {
     </>
   return (
     <div className="sticky top-0 w-full z-50">
-      <div className="bg-violet-50 backdrop-blur-lg border-b border-white/10 shadow-sm py-3 px-4 md:px-8">
+      <div className="backdrop-blur-lg border-b border-white/10 shadow-sm py-3 px-4 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="dropdown relative lg:hidden">
@@ -57,11 +68,17 @@ const Navbar = () => {
 
                     <ul
                       tabIndex={0}
-                      className="dropdown-content menu p-2 shadow bg-white rounded-box w-40 text-sm"
+                      className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-40 text-sm"
                     >
-                      <li><NavLink className='text-violet-500 font-medium text-base' to='/joined-events'>Joined Events</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-base' to='/manage-events'>Manage Events</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-base' to='/create-event'>Create Event</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-sm' to='/joined-events'>Joined Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-sm' to='/manage-events'>Manage Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-sm' to='/create-event'>Create Event</NavLink></li>
+                      <li className='w-full'>
+                        <div className='flex items-center gap-3'>
+                          <p className="text-violet-500 font-medium text-xs">{theme === "dark" ? "Dark" : "Light"}</p>
+                          <Switch theme={theme} handleTheme={handleTheme}></Switch>
+                        </div>
+                      </li>
                     </ul>
                   </div>
 
