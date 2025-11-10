@@ -76,7 +76,7 @@ const Navbar = () => {
                             timer: 2000,
                             showConfirmButton: false,
                           });
-                          console.log("Logged out");
+                          // console.log("Logged out");
                         })
                         .catch(err => {
                           Swal.fire({
