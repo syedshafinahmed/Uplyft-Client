@@ -1,9 +1,60 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { AuthContext } from '../context/AuthContext';
+import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router';
 
 const CreateEvents = () => {
+  const { user } = use(AuthContext);
+  const navigate = useNavigate();
   const [eventDate, setEventDate] = useState(null);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const formattedDate = eventDate.toLocaleDateString("en-US", {
+      month: "long",
+      day: "numeric",
+      year: "numeric",
+    });
+    const formData = {
+      title: e.target.title.value,
+      description: e.target.description.value,
+      event_type: e.target.event_type.value,
+      thumbnail_url: e.target.thumbnail_url.value,
+      location: e.target.location.value,
+      event_date: formattedDate,
+      created_by: user.email,
+    }
+    fetch('http://localhost:3000/events', {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    }).then(res => res.json())
+      .then(data => {
+        Swal.fire({
+          icon: 'success',
+          title: 'Event Created Successfully!',
+          text: `${formData.title} has been added.`,
+          confirmButtonColor: '#4F46E5',
+        }).then(() => {
+          navigate('/upcoming-events');
+        });
+        e.target.reset();
+        setEventDate(null);
+        // console.log(data)
+      }).catch(error => {
+        console.log(error);
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Something went wrong!',
+        });
+      });
+
+
+  }
 
   return (
     <div className="hero bg-base-200 min-h-screen pt-10 pb-40">
@@ -13,7 +64,7 @@ const CreateEvents = () => {
             Create New Event
           </h2>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="label font-semibold text-gray-700 mb-2">Event Title</label>
               <input
@@ -40,7 +91,7 @@ const CreateEvents = () => {
                 <option value="Awareness">Awareness</option>
                 <option value="Workshop">Workshop</option>
                 <option value="Seminar">Seminar</option>
-                <option value="Other">Other</option>
+                <option value="Other">Others</option>
               </select>
             </div>
 
