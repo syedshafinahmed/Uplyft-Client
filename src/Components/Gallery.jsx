@@ -40,15 +40,15 @@ const Gallery = () => {
             768: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          className="mb-8 slider"
+          className="slider"
         >
           {images.map((img, index) => (
             <SwiperSlide key={index}>
-              <div className="overflow-hidden rounded-2xl shadow-lg">
+              <div className="overflow-hidden rounded-2xl shadow-lg mb-10">
                 <img
                   src={img}
                   alt={`Event ${index + 1}`}
-                  className="w-full h-60 mb-10 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-60 rounded-2xl object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </SwiperSlide>
