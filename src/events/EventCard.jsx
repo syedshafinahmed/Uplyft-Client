@@ -1,7 +1,8 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const EventCard = ({ event }) => {
-  const { title, thumbnail_url, event_type, event_date, location, description, created_by } = event;
+  const { title, thumbnail_url, event_type, event_date, location, description, created_by, _id } = event;
 
   return (
     <div className="bg-violet-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-violet-400/40">
@@ -30,9 +31,9 @@ const EventCard = ({ event }) => {
 
         <p className="line-clamp-2 text-sm text-gray-700">{description}</p>
 
-        <button className="w-full mt-4 py-2 rounded-full bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-sm font-semibold hover:from-indigo-500 hover:to-violet-700 transition-all duration-300">
-          View Details
-        </button>
+        <NavLink to={`/event-details/${_id}`} className="btn w-full mt-4 py-2 border-none rounded-full bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-sm font-semibold hover:from-indigo-500 hover:to-violet-700 transition-all duration-300">
+          View Event
+        </NavLink>
       </div>
     </div>
   );
