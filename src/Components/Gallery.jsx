@@ -8,8 +8,14 @@ import event1 from "../assets/event1.png";
 import event2 from "../assets/event2.png";
 import event3 from "../assets/event3.png";
 import event4 from "../assets/event4.png";
+import event5 from "../assets/event5.png";
+import event6 from "../assets/event6.png";
+import event7 from "../assets/event7.png";
+import event8 from "../assets/event8.png";
+import event9 from "../assets/event9.png";
+import event10 from "../assets/event10.png";
 
-const images = [event1, event2, event3, event4];
+const images = [event1, event2, event3, event4, event5, event6, event7, event8, event9, event10];
 
 const Gallery = () => {
   return (
@@ -25,10 +31,10 @@ const Gallery = () => {
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{ clickable: true }}
-          autoplay={{ delay: 2000 }}
+          autoplay={{ delay: 1000 }}
           loop
           spaceBetween={20}
-          slidesPerView={1}
+          slidesPerView={3}
           breakpoints={{
             640: { slidesPerView: 1 },
             768: { slidesPerView: 2 },
@@ -42,7 +48,7 @@ const Gallery = () => {
                 <img
                   src={img}
                   alt={`Event ${index + 1}`}
-                  className="w-full h-72 object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-60 mb-10 object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
             </SwiperSlide>
