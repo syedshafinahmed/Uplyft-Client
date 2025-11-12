@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       {
         path: '/upcoming-events',
         element: <UpcomingEvents></UpcomingEvents>,
-        loader: () => fetch('http://localhost:3000/events')
+        loader: () => fetch('https://uplyft-server.vercel.app/events')
       },
       {
         path: '/create-event',
@@ -49,12 +49,12 @@ const router = createBrowserRouter([
       {
         path: '/event-details/:id',
         element: <EventDetails></EventDetails>,
-        loader: ({ params }) => fetch(`http://localhost:3000/events/${params.id}`)
+        loader: ({ params }) => fetch(`https://uplyft-server.vercel.app/events/${params.id}`)
       },
       {
         path: '/update-events/:id',
         element: <PrivateRoute><UpdateEvents></UpdateEvents></PrivateRoute>,
-        loader: ({ params }) => fetch(`http://localhost:3000/events/${params.id}`)
+        loader: ({ params }) => fetch(`https://uplyft-server.vercel.app/events/${params.id}`)
       },
       {
         path: '/login',

@@ -21,7 +21,7 @@ const JoinedEvents = () => {
       return;
     }
 
-    fetch(`http://localhost:3000/joined/${user.email}`, {
+    fetch(`https://uplyft-server.vercel.app/joined/${user.email}`, {
       headers: {
         authorization: `Bearer ${user.accessToken}`
       }

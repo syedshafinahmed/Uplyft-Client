@@ -25,7 +25,7 @@ const UpdateEvents = () => {
       event_date: formattedDate,
     }
 
-    fetch(`http://localhost:3000/events/${_id}`, {
+    fetch(`https://uplyft-server.vercel.app/events/${_id}`, {
       method: "PUT",
       headers: {
         'Content-Type': 'application/json',

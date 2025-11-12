@@ -8,14 +8,14 @@ const UpcomingEvents = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedType, setSelectedType] = useState('');
-  const [allEventTypes, setAllEventTypes] = useState([]); 
+  const [allEventTypes, setAllEventTypes] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3000/events') 
+    fetch('https://uplyft-server.vercel.app/events')
       .then(res => res.json())
       .then(data => {
         const types = Array.from(new Set(data.map(e => e.event_type))).sort();
-        setAllEventTypes(types); 
+        setAllEventTypes(types);
       })
       .catch(err => console.error('Error fetching all event types:', err));
   }, []);
@@ -26,7 +26,7 @@ const UpcomingEvents = () => {
     if (selectedType) params.append('type', selectedType);
     if (searchQuery) params.append('search', searchQuery);
 
-    fetch(`http://localhost:3000/events?${params.toString()}`)
+    fetch(`https://uplyft-server.vercel.app/events?${params.toString()}`)
       .then(res => res.json())
       .then(data => {
         setEvents(data);
@@ -39,7 +39,7 @@ const UpcomingEvents = () => {
   }, [searchQuery, selectedType]);
 
   const handleSearch = () => {
-    setSearchQuery(searchTerm); 
+    setSearchQuery(searchTerm);
   };
 
   if (loading) {

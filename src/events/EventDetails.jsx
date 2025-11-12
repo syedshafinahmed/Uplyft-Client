@@ -13,7 +13,7 @@ const EventDetails = () => {
   const [isJoined, setIsJoined] = useState(false);
   useEffect(() => {
     if (!user) return;
-    fetch(`http://localhost:3000/joined/${userEmail}`)
+    fetch(`https://uplyft-server.vercel.app/joined/${userEmail}`)
       .then(res => res.json())
       .then(data => {
         const alreadyJoined = data.some((j) => j.eventId === _id);
@@ -48,7 +48,7 @@ const EventDetails = () => {
       joinedAt: new Date().toISOString(),
     };
 
-    fetch("http://localhost:3000/joined", {
+    fetch("https://uplyft-server.vercel.app/joined", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

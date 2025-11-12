@@ -18,8 +18,8 @@ const Navbar = () => {
   }, [theme])
   const links =
     <>
-      <li><NavLink className='text-indigo-800 font-bold text-sm text-outline-white' to='/'>Home</NavLink></li>
-      <li><NavLink className='text-indigo-800 font-bold text-sm text-outline-white' to='/upcoming-events'>Upcoming Events</NavLink></li>
+      <li><NavLink className='text-indigo-800 font-bold text-sm' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-indigo-800 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">

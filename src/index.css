@@ -10,16 +10,12 @@
   font-family: "Quicksand", sans-serif;
 }
 
-.text-outline-white {
+/* .text-outline-white {
   text-shadow: 1 1 2px #ffffff;
-}
+} */
 
 
 li .active {
-  /* border: 1px solid #4338CA;
-  border-radius: 9999px;
-  background-color: #4338CA;
-  color: var(--b2); */
   @apply text-base-200 rounded-full bg-linear-to-b from-indigo-800 to-violet-500 px-5
 }
 

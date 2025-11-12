@@ -25,7 +25,7 @@ const CreateEvents = () => {
       event_date: formattedDate,
       created_by: user.email,
     }
-    fetch('http://localhost:3000/events', {
+    fetch('https://uplyft-server.vercel.app/events', {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

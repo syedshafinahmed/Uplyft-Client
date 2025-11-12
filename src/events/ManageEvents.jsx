@@ -8,7 +8,7 @@ const ManageEvents = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/events/user/${user.email}`, {
+    fetch(`https://uplyft-server.vercel.app/events/user/${user.email}`, {
       headers: {
         authorization: `Bearer ${user.accessToken}`
       }
