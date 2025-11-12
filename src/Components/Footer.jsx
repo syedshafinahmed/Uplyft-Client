@@ -15,7 +15,7 @@ const Footer = () => {
               <NavLink to='/'><span className='text-base-200 text-4xl font-black'>Uplyft</span></NavLink>
             </div>
           </div>
-          <p className="text-base-200 font-medium leading-relaxed mt-5 text-justify w-full md:w-72">
+          <p className="text-base-200 font-medium leading-relaxed mt-5 text-justify w-full md:w-52 lg:w-72">
             Empowering communities through events, collaboration, and awareness.
             Join us to make a positive social impact together.
           </p>

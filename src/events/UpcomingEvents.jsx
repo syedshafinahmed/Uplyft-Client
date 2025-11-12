@@ -94,7 +94,7 @@ const UpcomingEvents = () => {
       {events.length === 0 ? (
         <p className="text-center text-gray-600 text-lg min-h-screen">No events found.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 pb-40">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:px-5 gap-5 pb-40">
           {events.map(event => <EventCard key={event._id} event={event} />)}
         </div>
       )}
