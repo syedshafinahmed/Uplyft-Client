@@ -35,7 +35,8 @@ const Login = () => {
           showConfirmButton: false,
         });
 
-        navigate(location.state || '/');
+        const from = location.state?.from || '/';
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setLoading(false);
@@ -59,7 +60,8 @@ const Login = () => {
           timer: 2000,
           showConfirmButton: false,
         });
-        navigate(location.state || '/');
+        const from = location.state?.from || '/';
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         setLoading(false);
