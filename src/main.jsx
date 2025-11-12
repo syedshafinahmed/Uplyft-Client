@@ -14,6 +14,7 @@ import UpcomingEvents from './events/UpcomingEvents.jsx';
 import CreateEvents from './events/CreateEvents.jsx';
 import ManageEvents from './events/ManageEvents.jsx';
 import JoinedEvents from './events/JoinedEvents.jsx';
+import UpdateEvents from './events/UpdateEvents.jsx';
 import EventDetails from './events/EventDetails.jsx';
 const router = createBrowserRouter([
   {
@@ -48,6 +49,11 @@ const router = createBrowserRouter([
       {
         path: '/event-details/:id',
         element: <EventDetails></EventDetails>,
+        loader: ({ params }) => fetch(`http://localhost:3000/events/${params.id}`)
+      },
+      {
+        path: '/update-events/:id',
+        element: <PrivateRoute><UpdateEvents></UpdateEvents></PrivateRoute>,
         loader: ({ params }) => fetch(`http://localhost:3000/events/${params.id}`)
       },
       {

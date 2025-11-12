@@ -55,7 +55,7 @@ const ManageEvents = () => {
 
                   <p className="line-clamp-2 text-sm text-gray-700">{event.description}</p>
 
-                  <NavLink to={`/event-details/${event._id}`} className="btn w-full mt-4 py-2 border-none rounded-full bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-sm font-semibold hover:from-indigo-500 hover:to-violet-700 transition-all duration-300">
+                  <NavLink to={`/update-events/${event._id}`} className="btn w-full mt-4 py-2 border-none rounded-full bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-sm font-semibold hover:from-indigo-500 hover:to-violet-700 transition-all duration-300">
                     Update Event
                   </NavLink>
                 </div>
