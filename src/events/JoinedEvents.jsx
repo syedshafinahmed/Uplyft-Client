@@ -21,7 +21,11 @@ const JoinedEvents = () => {
       return;
     }
 
-    fetch(`http://localhost:3000/joined/${user.email}`)
+    fetch(`http://localhost:3000/joined/${user.email}`, {
+      headers: {
+        authorization: `Bearer ${user.accessToken}`
+      }
+    })
       .then(res => res.json())
       .then(data => setJoinedEvents(data))
       .catch(err => console.error("Error fetching joined events:", err));

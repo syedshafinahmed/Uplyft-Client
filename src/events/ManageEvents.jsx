@@ -8,7 +8,11 @@ const ManageEvents = () => {
   const [events, setEvents] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/events/user/${user.email}`)
+    fetch(`http://localhost:3000/events/user/${user.email}`, {
+      headers: {
+        authorization: `Bearer ${user.accessToken}`
+      }
+    })
       .then(res => res.json())
       .then(data => setEvents(data))
       .catch(error => console.log(error));
@@ -29,7 +33,7 @@ const ManageEvents = () => {
           ) : (
             events.map(event => (
 
-              <div className="bg-violet-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-violet-400/40">
+              <div key={event._id} className="bg-violet-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-violet-400/40">
                 <figure className="overflow-hidden rounded-t-2xl">
                   <img
                     src={event.thumbnail_url}
