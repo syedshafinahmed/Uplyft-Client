@@ -70,9 +70,10 @@ const Navbar = () => {
                       tabIndex={0}
                       className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-44 text-sm"
                     >
-                      <li><NavLink className='text-violet-500 font-medium text-sm' to='/joined-events'>Joined Events</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-sm' to='/manage-events'>Manage Events</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-sm' to='/create-event'>Create Event</NavLink></li>
+                      <li className='text-violet-500 font-bold text-sm md:text-xl text-center'>{user.displayName}</li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/joined-events'>Joined Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/manage-events'>Manage Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/create-event'>Create Event</NavLink></li>
                       <li className='w-full'>
                         <div className='flex items-center gap-3'>
                           <p className="text-violet-500 font-medium text-xs">{theme === "dark" ? "Dark" : "Light"} Mode</p>
