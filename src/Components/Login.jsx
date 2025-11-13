@@ -92,11 +92,11 @@ const Login = () => {
               <label className="label">Password</label>
               <div className="relative">
                 <input type={showPassword ? "text" : "password"} name="password" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Password" required />
-                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-indigo-800">
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-violet-500">
                   {showPassword ? (
-                    <PiEyeSlashDuotone size={15} />
-                  ) : (
                     <PiEyeDuotone size={15} />
+                  ) : (
+                    <PiEyeSlashDuotone size={15} />
                   )}
                 </button>
               </div>
