@@ -72,7 +72,7 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ## Event Details Page 
 
-<!-- <img width="full" alt="Greennest-PlantDetails" src="https://github.com/user-attachments/assets/ed5ce3ba-3b8e-408d-8ab5-8dcd1acaa10d" /> <br> -->
+<img width="full" alt="uplyft-event-details" src="https://github.com/user-attachments/assets/edebd896-640d-4adc-ac4a-60daf1b01ee7" /> <br>
 
 - The event details page is publicly accessible, allowing anyone to explore complete event information — including the event creator’s details, date, location, type, and description.
 - Features a prominent **Join This Event** button, but joining is available only for **authenticated users**.
@@ -89,10 +89,10 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ## Authentication (Firebase)
 
-<!-- <div align="center">
-  <img alt="Greennest-Register" src="https://github.com/user-attachments/assets/2ae9414b-45dd-46f7-ba23-da59945ea67c" style="width: 44%"  /> &nbsp;&nbsp;
-  <img alt="Greennest-Login" src="https://github.com/user-attachments/assets/d099bd60-fff0-47fa-afaa-f769e38df4db" style="width: 44%"  />  
-</div> <br> -->
+<div align="center">
+  <img alt="uplyft-login" src="https://github.com/user-attachments/assets/a96f836c-105e-4be0-be6b-b62d37520376" style="width: 44%"/> &nbsp;&nbsp;
+  <img alt="uplyft-register" src="https://github.com/user-attachments/assets/71b6ed4a-5b15-49b6-8974-944ecb0f0f7b" style="width: 44%" />
+</div> <br>
 
 - Secure **Email/Password** Authentication allowing users to register and log in safely.
 - Social Login Integration with **Google** for faster sign-in.
@@ -109,13 +109,10 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ## Profile Picture
 
-<!-- <div align="center">
-  <img alt="Greennest-Profile" src="https://github.com/user-attachments/assets/8e5ca97a-a3d3-4d6d-aa7c-ac5c4b68a0fb" style="width: 30%" /> &nbsp;&nbsp;
-  <img alt="Greennest-Profile-Edit" src="https://github.com/user-attachments/assets/761e8686-a02e-471c-ab7e-ec716dfe5ddb" style="width: 30%" /> &nbsp;&nbsp;
-  <img alt="Greennest-Profile-Update" src="https://github.com/user-attachments/assets/e9b604cd-5b62-43b2-9454-654a22ab95ff" style="width: 30%" />
-</div>
-
-<br> -->
+<div align="center">
+  <img alt="uplyft-home" src="https://github.com/user-attachments/assets/9f7d4823-fe45-40d8-a71a-2731c0ec8b66" style="width: 44%"/> &nbsp;&nbsp;
+  <img alt="uplyft-home" src="https://github.com/user-attachments/assets/a8339d85-6877-4587-a32f-5de607bfdb75" style="width: 44%"/>
+</div> <br>
 
 - The **Profile Picture** in the navbar acts as a dropdown menu, giving quick access to user-specific options.
 - Displays private route links for:
@@ -130,6 +127,7 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ## Create Event Page (Private Route)
 
+<img width="full" alt="uplyft-create-events" src="https://github.com/user-attachments/assets/b862d6ec-c16c-49d2-bcf7-69e02b514959" /> <br>
 
 - Accessible only to **Logged-in Users**, ensuring secure event creation.
 - Users can enter: Title, Description, Event Type (Cleanup, Plantation, Donation, etc.), Thumbnail Image URL, Location, Future Event Date (validated using **react-datepicker**; past dates cannot be selected).
@@ -142,6 +140,8 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ## Joined Events Page (Private Route)
 
+<img width="full" alt="uplyft-joined-events" src="https://github.com/user-attachments/assets/4b463d59-0e93-448f-8c3b-f47b518600d4" /> <br>
+
 - Displays all events joined by the **Logged-in User**.
 - Events are sorted by upcoming date, keeping the user’s schedule organized.
 - Joined events cannot be joined again, preventing duplicates.
@@ -152,6 +152,11 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 
 ## Manage Events Page (Private Route)
+
+<div align="center">
+  <img alt="uplyft-manage-events" src="https://github.com/user-attachments/assets/16096288-507a-4f33-9a3b-1673e3836503" style="width: 44%"/> &nbsp;&nbsp;
+  <img alt="uplyft-update-events" src="https://github.com/user-attachments/assets/14518fed-bc37-4cfb-a8e2-de23eacaa5df" style="width: 44%"/>
+</div> <br>
 
 - Shows all events created by the **Logged-in User**.
 - Users can update event details such as title, description, type, date, location, or image.
