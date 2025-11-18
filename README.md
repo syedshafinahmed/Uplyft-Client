@@ -129,6 +129,40 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ---
 
+
+## Create Event Page (Private Route)
+
+
+- Accessible only to **Logged-in Users**, ensuring secure event creation.
+- Users can enter: Title, Description, Event Type (Cleanup, Plantation, Donation, etc.), Thumbnail Image URL, Location, Future Event Date (validated using **react-datepicker**; past dates cannot be selected).
+- Automatically stores the **creator’s email** with the event for ownership verification.
+- Shows a success alert upon creation and redirects to the **Upcoming Events page**.
+- Fully responsive form layout with clear input validation messages.
+
+---
+
+
+## Joined Events Page (Private Route)
+
+- Displays all events joined by the **Logged-in User**.
+- Events are sorted by upcoming date, keeping the user’s schedule organized.
+- Joined events cannot be joined again, preventing duplicates.
+- Provides a clean, responsive card layout for easy browsing.
+- Allows users to **quickly navigate to event details** from their joined events list.
+
+---
+
+
+## Manage Events Page (Private Route)
+
+- Shows all events created by the **Logged-in User**.
+- Users can update event details such as title, description, type, date, location, or image.
+- Ensures ownership validation, so no user can **modify or delete someone else’s events**.
+- Responsive layout with action buttons for editing events, ensuring easy management of all created events.
+
+---
+
+
 ## 🧰 Tech Stack
 
 | 🏷️ **Category**         | ⚙️ **Technology Used**                                                                                           |
