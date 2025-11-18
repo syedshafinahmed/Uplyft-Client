@@ -124,7 +124,7 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
    - Create Event
    - Manage Events
    - Joined Events
-- Includes a **Dark/Light Mode** toggle button for instant theme switching.
+- Includes a **Light/Dark Mode** toggle button for instant theme switching.
 - Hovering over the profile picture reveals the user’s Name, enhancing personalization.
 
 ---
@@ -165,28 +165,32 @@ Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event 
 
 ## 🧰 Tech Stack
 
-| 🏷️ **Category**         | ⚙️ **Technology Used**                                                                                           |
-| ----------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **Library**             | [React.js](https://react.dev/)                                                                                   |
-| **Styling**             | [Tailwind CSS](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/)                                       |
-| **Routing**             | [React Router](https://reactrouter.com/)                                                                         |
-| **Authentication**      | [Firebase Authentication](https://firebase.google.com/docs/auth)                                                 |
-| **Animations / Slider** | [Swiper.js](https://swiperjs.com/)                                                                               |
-| **Toasts**              | [React Toastify](https://fkhadra.github.io/react-toastify/introduction)                                          |
-| **Data Source**         | Local JSON (`plants.json`)                                                                                       |
-| **State Management**    | React Hooks (`useState`, `useEffect`, `useContext`)                                                              |
-| **Deployment**          | [Firebase Hosting](https://firebase.google.com/docs/hosting) / [Cloudflare Pages](https://pages.cloudflare.com/) |
+| 🏷️ **Category**        | ⚙️ **Technology Used**                                                                                                             |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| **Library**             | [React.js](https://react.dev/)                                                                                                     |
+| **Styling**             | [Tailwind CSS](https://tailwindcss.com/) + [daisyUI](https://daisyui.com/) + [Styled Components](https://styled-components.com/)   |
+| **Routing**             | [React Router](https://reactrouter.com/)                                                                                           |
+| **Authentication**      | [Firebase Authentication](https://firebase.google.com/docs/auth)                                                                   |
+| **Animations / Motion** | [Framer Motion](https://www.framer.com/motion/) + [AOS](https://michalsnik.github.io/aos/)                                         |
+| **Slider / Gallery**    | [Swiper.js](https://swiperjs.com/)                                                                                                 |
+| **Date Picker**         | [React Datepicker](https://reactdatepicker.com/)                                                                                   |
+| **Loading / Spinners**  | [React Spinners](https://www.davidhu.io/react-spinners/)                                                                           |
+| **Alerts / Toasts**     | [SweetAlert2](https://sweetalert2.github.io/)                                                                                      |
+| **State Management**    | React Hooks (`useState`, `useEffect`, `useContext`)                                                                                |
+| **Deployment**          | [Netlify](https://www.netlify.com/) / [Vercel](https://vercel.com/) |
 
 ---
 
 ## 🔧 Highlights
 
-- Fully **responsive** & performance optimized.
-- **Protected Routes** with PrivateRoute.
-- Real-time profile updates using Firebase.
-- Toast notifications for user actions.
-- Clean, minimal UI with smooth transitions.
-- No reload or crash errors on route navigation.
+- **Fully responsive** for all devices.
+- **Unique UI** based on the theme of social development.
+- **Light-Dark Mode Toggle**.
+- **Protected Routes** for event creation & management.
+- **Smooth routing** with no reload errors.
+- Dynamic event filtering based on date.
+- Polished UX with toast notifications.
+- Ensures login persistence on reload (Firebase auth configured correctly).
 
 ---
 
