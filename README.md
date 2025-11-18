@@ -48,9 +48,7 @@ npm run build
 
 ## Home Page
 
-<!-- <img width="full" alt="Greennest-Home" src="https://github.com/user-attachments/assets/5dde2c25-5f8f-4466-bbd7-2dd650842595" /><br> -->
-<!-- <img width="1351" height="3689" alt="greennest-syedshafinahmed pages dev_" src="https://github.com/user-attachments/assets/5dde2c25-5f8f-4466-bbd7-2dd650842595" /> -->
-
+<img width="full" alt="uplyft-home" src="https://github.com/user-attachments/assets/4eac1f17-d997-45e5-9321-f09d555b5cb3" /> <br>
 
 - A vibrant, community-inspired banner section enhanced with **Framer Motion** animations, creating a smooth, modern, and engaging first impression.
 - Visually rich feature highlights, animated with **Framer Motion** to deliver an interactive, dynamic feel as users explore the platform’s core strengths.
@@ -61,7 +59,7 @@ npm run build
 
 ## Upcoming Events Page
 
-<!-- <img width="full" alt="Greennest-Plants" src="https://github.com/user-attachments/assets/d3bb5354-e6e3-4111-ada4-6766822426e8" /><br> -->
+<img width="full" alt="uplyft-upcoming-events" src="https://github.com/user-attachments/assets/8bc04505-9e9a-45db-9cc8-8c18a861697d" /> <br>
 
 - Shows only upcoming events, automatically filtering out past ones using **backend-side date validation**
 - Feature-rich event cards displaying all essential details —
