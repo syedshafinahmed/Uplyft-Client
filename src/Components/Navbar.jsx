@@ -18,12 +18,12 @@ const Navbar = () => {
   }, [theme])
   const links =
     <>
-      <li><NavLink className='text-indigo-800 font-bold text-sm' to='/'>Home</NavLink></li>
-      <li><NavLink className='text-indigo-800 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">
-      <div className="backdrop-blur-lg  shadow-sm py-2 md:py-3 px-3 md:px-8">
+      <div className="backdrop-blur-lg  py-2 md:py-3 px-3 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="dropdown relative lg:hidden">
@@ -41,8 +41,8 @@ const Navbar = () => {
             </div>
             <div>
               <div className='flex'>
-                <RiCommunityFill size={40} className='text-indigo-800 hidden md:block' />
-                <NavLink to='/'><span className='bg-linear-to-b from-indigo-800 to-indigo-800 bg-clip-text text-transparent text-2xl md:text-4xl font-black'>Uplyft</span></NavLink>
+                <RiCommunityFill size={30} className='text-indigo-800 dark:text-violet-600 hidden md:block' />
+                <NavLink to='/'><span className='bg-indigo-800 dark:bg-violet-600 bg-clip-text text-transparent text-2xl font-black'>Uplyft</span></NavLink>
               </div>
             </div>
           </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
                       className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-primary"
                       data-tip={user.displayName || "User"}
                     >
-                      <div className="w-8 rounded-full border-2 border-indigo-800">
+                      <div className="w-8 rounded-full border-2 border-indigo-800 dark:border-violet-600">
                         <img src={user.photoURL || "https://via.placeholder.com/150"} referrerPolicy="no-referrer" alt="User" />
                       </div>
                     </label>

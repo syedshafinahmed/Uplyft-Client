@@ -16,7 +16,7 @@
 
 
 li .active {
-  @apply border-b-2 border-indigo-800 text-indigo-800 font-bold;
+  @apply border-b-2 border-indigo-800 dark:border-violet-600 text-indigo-800 dark:text-violet-600 font-bold;
 }
 /* li .active {
   @apply text-base-200 rounded-full bg-linear-to-b from-indigo-800 to-violet-500 px-5
