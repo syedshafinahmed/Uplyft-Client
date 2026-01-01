@@ -73,7 +73,7 @@ const UpcomingEvents = () => {
           />
           <button
             onClick={handleSearch}
-            className="absolute top-1/2 right-2 -translate-y-1/2 z-10 bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-xs font-bold px-6 py-1 rounded-full hover:from-violet-500 hover:to-indigo-800"
+            className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-xs font-semibold px-6 py-3 rounded-tr-full rounded-br-full hover:from-violet-500 hover:to-indigo-800"
           >
             Search
           </button>
@@ -94,7 +94,7 @@ const UpcomingEvents = () => {
       {events.length === 0 ? (
         <p className="text-center text-gray-600 text-lg min-h-screen">No events found.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 px-5 md:px-0 gap-5 pb-40">
+        <div className="grid grid-cols-1 md:grid-cols-4 px-5 md:px-0 gap-5 pb-40">
           {events.map(event => <EventCard key={event._id} event={event} />)}
         </div>
       )}
