@@ -23,11 +23,11 @@ const Navbar = () => {
     </>
   return (
     <div className="sticky top-0 w-full z-50">
-      <div className="backdrop-blur-lg  shadow-sm py-3 px-4 md:px-8">
+      <div className="backdrop-blur-lg  shadow-sm py-2 md:py-3 px-3 md:px-8">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="dropdown relative lg:hidden">
-              <div tabIndex={0} role="button" className="btn btn-ghost btn-sm">
+              <div tabIndex={0} role="button" className="btn btn-ghost btn-sm md:btn-md">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 stroke-indigo-800" fill="none"
                   viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
@@ -41,7 +41,7 @@ const Navbar = () => {
             </div>
             <div>
               <div className='flex'>
-                <RiCommunityFill size={40} className='text-indigo-800' />
+                <RiCommunityFill size={40} className='text-indigo-800 hidden md:block' />
                 <NavLink to='/'><span className='bg-linear-to-b from-indigo-800 to-indigo-800 bg-clip-text text-transparent text-2xl md:text-4xl font-black'>Uplyft</span></NavLink>
               </div>
             </div>
@@ -51,7 +51,12 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-4">
+            <div className='w-full hidden md:block'>
+              <div className='flex items-center'>
+                <Switch theme={theme} handleTheme={handleTheme}></Switch>
+              </div>
+            </div>
             {
               user ?
                 (<div className="flex items-center gap-3">
@@ -61,7 +66,7 @@ const Navbar = () => {
                       className="btn btn-ghost btn-circle avatar tooltip tooltip-bottom tooltip-primary"
                       data-tip={user.displayName || "User"}
                     >
-                      <div className="w-10 rounded-full border-2 border-indigo-800">
+                      <div className="w-8 rounded-full border-2 border-indigo-800">
                         <img src={user.photoURL || "https://via.placeholder.com/150"} referrerPolicy="no-referrer" alt="User" />
                       </div>
                     </label>
@@ -70,19 +75,45 @@ const Navbar = () => {
                       tabIndex={0}
                       className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-44 text-sm"
                     >
-                      <li className='text-violet-500 font-bold text-sm md:text-xl text-center'>{user.displayName}</li>
+                      <li className='text-violet-500 font-bold text-sm md:text-xl pl-3 py-2 text-start'>{user.displayName}</li>
+                      <li><NavLink to='/'>Home</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/joined-events'>Joined Events</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/manage-events'>Manage Events</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/create-event'>Create Event</NavLink></li>
-                      <li className='w-full'>
+                      <li><button
+                        onClick={() =>
+                          signOutUser()
+                            .then(() => {
+                              Swal.fire({
+                                icon: 'success',
+                                title: 'Logged Out!',
+                                text: 'You have successfully logged out.',
+                                timer: 2000,
+                                showConfirmButton: false,
+                              });
+                              // console.log("Logged out");
+                            })
+                            .catch(err => {
+                              Swal.fire({
+                                icon: 'error',
+                                title: 'Logout Failed!',
+                                text: err.message,
+                              });
+                            })
+                        }
+                        className="text-violet-500 font-medium text-xs md:text-sm"
+                      >
+                        Logout
+                      </button></li>
+                      {/* <li className='w-full'>
                         <div className='flex items-center gap-3'>
                           <p className="text-violet-500 font-medium text-xs">{theme === "dark" ? "Dark" : "Light"} Mode</p>
                           <Switch theme={theme} handleTheme={handleTheme}></Switch>
                         </div>
-                      </li>
+                      </li> */}
                     </ul>
                   </div>
-
+{/* 
                   <button
                     onClick={() =>
                       signOutUser()
@@ -104,15 +135,15 @@ const Navbar = () => {
                           });
                         })
                     }
-                    className="btn text-base-200 rounded-full border-none text-xs font-bold w-20 bg-linear-to-b from-indigo-800 to-violet-500"
+                    className="btn btn-xs md:btn-sm text-base-200 rounded-full border-none text-xs font-bold w-16 md:w-20 bg-linear-to-b from-indigo-800 to-violet-500"
                   >
                     Logout
-                  </button>
+                  </button> */}
                 </div>
                 ) :
-                (<div className="flex items-center gap-3">
-                  <NavLink to='/login'><button className='btn border-none font-bold text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
-                  <NavLink to='/register'><button className='btn border-none font-bold text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
+                (<div className="flex items-center gap-1 md:gap-3">
+                  <NavLink to='/login'><button className='btn btn-xs md:btn-sm border-none font-bold text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Login</button></NavLink>
+                  <NavLink to='/register'><button className='btn btn-xs md:btn-sm border-none font-bold text-base-200 rounded-full text-xs w-20 bg-linear-to-b from-indigo-800 to-violet-500'>Register</button></NavLink>
                 </div>)
             }
           </div>
