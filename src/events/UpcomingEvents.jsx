@@ -52,16 +52,16 @@ const UpcomingEvents = () => {
 
   return (
     <div className="max-w-7xl mx-auto px-5 md:px-0">
-      <div className="text-center mt-10 mb-8">
-        <p className="text-2xl md:text-3xl font-extrabold bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent">
+      <div className="text-start mt-10 mb-8">
+        <p className="text-2xl md:text-5xl font-extrabold text-indigo-800 dark:text-violet-600">
           Get Ready for What's Coming!
         </p>
-        <p className="text-md font-medium bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent">
+        <p className="text-xl mt-2 font-semibold text-indigo-800 dark:text-violet-600">
           Something inspiring awaits.
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-center py-5 gap-4 mb-10">
+      <div className="flex flex-col md:flex-row items-center justify-between py-5 gap-4 mb-10">
         <div className="relative w-full md:w-1/3">
           <input
             type="text"
@@ -94,7 +94,7 @@ const UpcomingEvents = () => {
       {events.length === 0 ? (
         <p className="text-center text-gray-600 text-lg min-h-screen">No events found.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:px-5 gap-5 pb-40">
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 px-5 md:px-0 gap-5 pb-40">
           {events.map(event => <EventCard key={event._id} event={event} />)}
         </div>
       )}
