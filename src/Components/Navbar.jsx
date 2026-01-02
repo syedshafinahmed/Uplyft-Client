@@ -4,6 +4,7 @@ import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import Swal from 'sweetalert2';
 import Switch from '../toggle/Switch';
+import { NavHashLink } from 'react-router-hash-link';
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || "light")
@@ -19,6 +20,9 @@ const Navbar = () => {
   const links =
     <>
       <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/about'>About</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/how-it-works'>How it works</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/contact'>Contact</NavLink></li>
       <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (

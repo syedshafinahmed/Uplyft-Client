@@ -1,6 +1,6 @@
 import React from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaXTwitter } from "react-icons/fa6";
 import { RiCommunityFill } from "react-icons/ri";
 import { NavLink } from "react-router";
 
@@ -21,6 +21,14 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-4 mt-6">
+            <a href="https://www.linkedin.com/in/syed-shafin-ahmed-760533351/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-base-200 text-base-200 hover:bg-base-200 hover:text-indigo-900 transition-all duration-300"
+            >
+              <FaLinkedinIn />
+            </a>
+
+            <a href="https://github.com/syedshafinahmed" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-base-200 text-base-200 hover:bg-base-200 hover:text-indigo-900 transition-all duration-300">
+              <FaGithub />
+            </a>
             <a href="https://www.facebook.com/share/172vjragcm/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-base-200 text-base-200 hover:bg-base-200 hover:text-indigo-900 transition-all duration-300">        <FaFacebookF />
             </a>
 
@@ -28,14 +36,6 @@ const Footer = () => {
               <FaInstagram />
             </a>
 
-            <a href="https://www.linkedin.com/in/syed-shafin-ahmed-760533351/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-base-200 text-base-200 hover:bg-base-200 hover:text-indigo-900 transition-all duration-300"
-            >
-              <FaLinkedinIn />
-            </a>
-
-            <a href="#" target="_blank" rel="noopener noreferrer" className="w-10 h-10 flex items-center justify-center rounded-full border border-base-200 text-base-200 hover:bg-base-200 hover:text-indigo-900 transition-all duration-300">
-              <FaXTwitter />
-            </a>
 
           </div>
         </div>
@@ -44,9 +44,9 @@ const Footer = () => {
           <h3 className="text-xl font-semibold text-base-200 mb-4">Quick Links</h3>
           <ul className="space-y-3 text-base-200">
             <li><a href="#" className="hover:underline transition-all">Home</a></li>
-            <li><NavLink className='hover:underline transition-all' to='/upcoming-events'>Upcoming Events</NavLink></li>
-            <li><NavLink className='hover:underline transition-all' to='/joined-events'>Joined Events</NavLink></li>
-            <li><NavLink className='hover:underline transition-all' to='/manage-events'>Manage Events</NavLink></li>
+            <li><NavLink className='hover:underline transition-all' to='/about'>About</NavLink></li>
+            <li><NavLink className='hover:underline transition-all' to='/how-it-works'>How it works</NavLink></li>
+            <li><NavLink className='hover:underline transition-all' to='/contact'>Contact</NavLink></li>
             <li><NavLink className='hover:underline transition-all' to='/create-event'>Create Event</NavLink></li>
 
           </ul>
