@@ -43,7 +43,7 @@ const Footer = () => {
         <div>
           <h3 className="text-xl font-semibold text-base-200 mb-4">Quick Links</h3>
           <ul className="space-y-3 text-base-200">
-            <li><a href="#" className="hover:underline transition-all">Home</a></li>
+            <li><NavLink className='hover:underline transition-all' to='/'>Home</NavLink></li>
             <li><NavLink className='hover:underline transition-all' to='/about'>About</NavLink></li>
             <li><NavLink className='hover:underline transition-all' to='/how-it-works'>How it works</NavLink></li>
             <li><NavLink className='hover:underline transition-all' to='/contact'>Contact</NavLink></li>

@@ -16,6 +16,7 @@ import ManageEvents from './events/ManageEvents.jsx';
 import JoinedEvents from './events/JoinedEvents.jsx';
 import UpdateEvents from './events/UpdateEvents.jsx';
 import EventDetails from './events/EventDetails.jsx';
+import About from './Components/About.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: '/home',
         element: <Home></Home>
+      },
+      {
+        path: '/about',
+        element: <About></About>
       },
       {
         path: '/upcoming-events',
