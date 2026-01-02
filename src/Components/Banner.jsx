@@ -33,7 +33,7 @@ const Banner = () => {
             Act Locally,<br /> Impact Globally.
           </h1>
 
-          <p className='text-gray-600 font-semibold text-justify pr-0 md:pr-15 text-sm sm:text-base md:text-lg'>
+          <p className='text-gray-600 dark:text-gray-300 font-semibold text-justify pr-0 md:pr-15 text-sm sm:text-base md:text-lg'>
             Be part of meaningful change by connecting with a community dedicated to making a real impact. Join and create social events, support important causes, and actively participate in initiatives that strengthen communities, inspire collaboration, and drive positive change at both local and broader levels.
           </p>
 
@@ -51,7 +51,7 @@ const Banner = () => {
           </div>
 
           <div>
-            <p className='text-gray-600 font-black text-sm sm:text-base'>Powered By</p>
+            <p className='text-gray-600 dark:text-gray-300 font-black text-sm sm:text-base'>Powered By</p>
             <div className='flex flex-wrap gap-3 mt-3'>
               {[l5, l8, l1, l6, l7, l2, l3, l4].map((logo, i) => (
                 <motion.img

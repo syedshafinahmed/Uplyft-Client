@@ -15,7 +15,34 @@
 } */
 
 
-a .active {
+
+
+/* Slow spinning border for light mode */
+.spin-border {
+  border-radius: 9999px;
+  background: conic-gradient(from 0deg, #6366f1, #00000000, #00000000, #6366f1);
+  animation: spin 6s linear infinite;
+}
+
+/* Dark mode for daisyUI / custom dark theme */
+[data-theme=dark] .spin-border {
+  background: conic-gradient(from 0deg, #a855f7, #00000000, #00000000, #a855f7);
+}
+
+/* Keyframes for spinning */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+li .active {
   @apply border-b-2 border-indigo-800 dark:border-violet-600 text-indigo-800 dark:text-violet-600 font-bold;
 }
 /* li .active {
