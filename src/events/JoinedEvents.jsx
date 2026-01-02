@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext";
-import { NavLink, useNavigate } from "react-router";
-import EventCard from "./EventCard";
+import { useNavigate } from "react-router";
 
 const JoinedEvents = () => {
   const { user, loading } = useContext(AuthContext);
@@ -84,7 +83,29 @@ const JoinedEvents = () => {
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-30">
             {joinedEvents.map((event) => (
-              <EventCard key={event._id} event={event} />
+              <div key={event.id} className="bg-base-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-indigo-800/20 dark:border-violet-600/20">
+                <figure className="overflow-hidden rounded-t-2xl">
+                  <img
+                    src={event.thumbnail_url}
+                    alt={event.title}
+                    className="w-full h-56 object-cover transition-transform duration-500 hover:scale-110"
+                  />
+                </figure>
+
+                <div className="p-5 space-y-2 text-left">
+                  <h2 className="text-sm font-bold text-indigo-800 dark:text-violet-600 line-clamp-2">{event.title}</h2>
+
+                  <div className="text-xs space-y-0.5">
+                    <p><span className="font-bold text-black dark:text-white">Date:</span> {event.event_date}</p>
+                    <p className='line-clamp-1'><span className="font-bold text-black dark:text-white">Location:</span> {event.location}</p>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="inline-flex items-center bg-base-200 text-indigo-800 dark:text-violet-600 border border-indigo-800 dark:border-violet-600 font-semibold text-xs px-3 py-1 rounded-full">
+                      {event.event_type}
+                    </span>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         )}
