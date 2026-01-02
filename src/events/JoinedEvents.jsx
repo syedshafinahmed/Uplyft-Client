@@ -1,11 +1,13 @@
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../context/AuthContext";
 import { NavLink, useNavigate } from "react-router";
+import EventCard from "./EventCard";
 
 const JoinedEvents = () => {
-  const { user, loading } = use(AuthContext);
+  const { user, loading } = useContext(AuthContext);
   const [joinedEvents, setJoinedEvents] = useState([]);
+  const [fetching, setFetching] = useState(true);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,20 +23,49 @@ const JoinedEvents = () => {
       return;
     }
 
+    setFetching(true);
     fetch(`https://uplyft-server.vercel.app/joined/${user.email}`, {
       headers: {
-        authorization: `Bearer ${user.accessToken}`
-      }
+        authorization: `Bearer ${user.accessToken}`,
+      },
     })
-      .then(res => res.json())
-      .then(data => setJoinedEvents(data))
-      .catch(err => console.error("Error fetching joined events:", err));
+      .then((res) => res.json())
+      .then((data) => setJoinedEvents(data))
+      .catch((err) =>
+        console.error("Error fetching joined events:", err)
+      )
+      .finally(() => setFetching(false));
   }, [user, loading, navigate]);
 
-  if (loading) {
+  const renderSkeleton = () => {
+    return Array(4)
+      .fill(0)
+      .map((_, index) => (
+        <div
+          key={index}
+          className="bg-base-200 mt-20 mb-20 rounded-2xl shadow-md animate-pulse border border-indigo-800/20 dark:border-violet-600/20"
+        >
+          <div className="w-full h-56 bg-gray-300 dark:bg-gray-700 rounded-t-2xl"></div>
+          <div className="p-5 space-y-2">
+            <div className="h-5 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
+            <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
+            <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/3"></div>
+            <div className="flex justify-between mt-4">
+              <div className="h-6 w-16 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+              <div className="flex gap-2">
+                <div className="h-10 w-10 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+                <div className="h-10 w-10 bg-gray-300 dark:bg-gray-700 rounded-full"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ));
+  };
+
+  if (loading || fetching) {
     return (
-      <div className="min-h-screen flex items-center justify-center text-lg font-semibold">
-        Loading your joined events...
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-8 p-6">
+        {renderSkeleton()}
       </div>
     );
   }
@@ -43,7 +74,7 @@ const JoinedEvents = () => {
     <div className="min-h-screen bg-base-200 py-12 px-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl font-black mb-8 text-center bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent">
-          My Joined Events
+          Events I have joined
         </h1>
 
         {joinedEvents.length === 0 ? (
@@ -51,40 +82,9 @@ const JoinedEvents = () => {
             You haven’t joined any events yet.
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 pt-20 pb-30">
-            {joinedEvents.map(event => (
-              // <EventCard key={event._id} event={event} />
-              <div key={event._id} className="bg-violet-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-transparent hover:border-violet-400/40">
-                <figure className="overflow-hidden rounded-t-2xl">
-                  <img
-                    src={event.thumbnail_url}
-                    alt={event.title}
-                    className="w-full h-56 object-cover transition-transform duration-500 hover:scale-105"
-                  />
-                </figure>
-
-                <div className="p-5 space-y-2 text-left">
-                  <h2 className="text-lg font-bold text-indigo-800">{event.title}</h2>
-
-                  <div className="text-sm text-gray-500 space-y-0.5">
-                    <p><span className="font-bold text-gray-800">Date:</span> {event.event_date}</p>
-                    <p><span className="font-bold text-gray-800">Location:</span> {event.location}</p>
-                  </div>
-
-                  <span className="inline-block bg-base-200 text-violet-500 font-semibold text-xs px-3 py-1 rounded-full mt-2">
-                    {event.event_type}
-                  </span>
-                  <div className="text-sm text-gray-500 space-y-0.5">
-                    <p><span className="font-medium text-xs text-gray-800">Created by:</span> {event.created_by}</p>
-                  </div>
-
-                  <p className="line-clamp-2 text-sm text-gray-700">{event.description}</p>
-
-                  <NavLink to={`/event-details/${event.eventId}`} className="btn w-full mt-4 py-2 border-none rounded-full bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-sm font-semibold hover:from-indigo-500 hover:to-violet-700 transition-all duration-300">
-                    View Event
-                  </NavLink>
-                </div>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-30">
+            {joinedEvents.map((event) => (
+              <EventCard key={event._id} event={event} />
             ))}
           </div>
         )}

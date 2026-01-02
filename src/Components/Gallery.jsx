@@ -20,10 +20,10 @@ const images = [event1, event2, event3, event4, event5, event6, event7, event8, 
 const Gallery = () => {
   return (
     <section className="gallery-section py-20 px-6 text-center">
-      <h2 className="text-3xl md:text-5xl font-bold text-indigo-800 mb-6">
+      <h2 className="text-3xl md:text-5xl font-bold text-indigo-800 dark:text-violet-600 mb-6">
         Event Gallery
       </h2>
-      <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+      <p className="text-gray-500 font-bold max-w-2xl mx-auto mb-12">
         Explore moments from our past social development events.
       </p>
 
@@ -37,8 +37,8 @@ const Gallery = () => {
           slidesPerView={1}
           breakpoints={{
             640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
+            768: { slidesPerView: 4 },
+            1024: { slidesPerView: 4 },
           }}
           className="slider"
         >
