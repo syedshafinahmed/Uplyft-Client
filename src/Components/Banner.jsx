@@ -109,7 +109,7 @@ const Banner = () => {
 
           <div className="relative mt-3">
             <motion.div
-              className="absolute -top-10 font-semibold right-3 z-50 bg-indigo-800 dark:bg-violet-600 text-base-200 px-3 py-3 rounded-lg text-xs text-center shadow-lg"
+              className="absolute -top-10 font-semibold right-3 z-5 bg-indigo-800 dark:bg-violet-600 text-base-200 px-3 py-3 rounded-lg text-xs text-center shadow-lg"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 3.5, repeat: Infinity }}
             >

@@ -1,7 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaInstagram } from 'react-icons/fa';
-import { FaSquareInstagram, FaSquareXTwitter } from "react-icons/fa6";
+import { FaSquareXTwitter } from "react-icons/fa6";
 import { SiLinkedin } from "react-icons/si";
 
 const Team = () => {
@@ -10,28 +9,35 @@ const Team = () => {
       name: 'Shafin Ahmed', 
       img: 'https://i.ibb.co.com/JR2YVTLG/Whats-App-Image-2026-01-03-at-12-08-30-AM.jpg', 
       role: 'Event Coordinator',
-      linkedin: '#', 
+      linkedin: 'https://www.linkedin.com/in/syed-shafin-ahmed/', 
       instagram: '#' 
     },
     { 
       name: 'Nafin Ahmed', 
       img: 'https://i.ibb.co.com/4njtfg1N/IMG-20240908-004438-350.jpg', 
       role: 'Community Manager',
-      linkedin: '#', 
+      linkedin: 'https://www.linkedin.com/in/syednafinahmed/', 
       instagram: '#' 
     },
     { 
       name: 'Anik Rubayet', 
       img: 'https://i.ibb.co.com/yFXsHxFs/Whats-App-Image-2026-01-02-at-11-37-26-PM-1.jpg', 
       role: 'Outreach Specialist',
-      linkedin: '#', 
+      linkedin: 'https://www.linkedin.com/in/md-rubayet-hossain-1b17a226a/', 
       instagram: '#' 
     },
     { 
       name: 'Tashfiq Talukder', 
-      img: 'https://i.ibb.co.com/nqmtr5Lq/Whats-App-Image-2026-01-02-at-11-48-50-PM.jpg', 
+      img: 'https://i.ibb.co.com/rKQJJHqH/Whats-App-Image-2026-01-03-at-1-39-18-AM.jpg', 
       role: 'Social Media Manager',
       linkedin: '#', 
+      instagram: '#' 
+    },
+    { 
+      name: 'Archo Islam', 
+      img: 'https://i.ibb.co.com/r2r2fKJ3/Gemini-Generated-Image-5237852378523785.png', 
+      role: 'Volunteer Lead',
+      linkedin: 'https://www.linkedin.com/in/asa-ad-mohammad-akib-411a45387/', 
       instagram: '#' 
     },
   ];
@@ -44,18 +50,18 @@ const Team = () => {
       <p className="text-center text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
         Collaborating as a team to organize impactful events that bring communities together and drive positive change.
       </p>
-      <div className="flex flex-wrap justify-center gap-8 md:gap-25">
+      <div className="flex flex-wrap justify-center gap-8 md:gap-32">
         {members.map((member, index) => (
           <motion.div
             key={index}
-            className="relative w-28 sm:w-32 md:w-40 flex flex-col items-center"
+            className="relative w-28 sm:w-32 md:40 flex flex-col items-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.5 }}
           >
             {/* Rotating Border Wrapper */}
-            <div className="relative rounded-full w-28 sm:w-32 md:w-60 h-28 sm:h-32 md:h-60">
+            <div className="relative rounded-full w-28 sm:w-32 md:w-56 h-28 sm:h-32 md:h-56">
               <div className="absolute inset-0 rounded-full spin-border"></div>
               <div className="absolute inset-1 md:inset-1.5 rounded-full overflow-hidden">
                 <img
@@ -68,10 +74,10 @@ const Team = () => {
 
             {/* Member Info */}
             <div className="text-center mt-3">
-              <p className="font-bold text-indigo-800 dark:text-violet-600 text-sm sm:text-base">
+              <p className="font-black text-indigo-800 dark:text-violet-600 text-sm">
                 {member.name}
               </p>
-              <p className="text-gray-500 dark:text-gray-300 font-semibold text-xs sm:text-sm">{member.role}</p>
+              <p className="text-gray-500 dark:text-gray-300 font-semibold text-xs">{member.role}</p>
 
               {/* Social Icons */}
               <div className="flex justify-center gap-2 mt-2">
