@@ -19,7 +19,7 @@ import { IoMail } from 'react-icons/io5';
 
 const Banner = () => {
   return (
-    <div className='max-w-7xl mx-auto mt-3 px-10 md:px-0'>
+    <div className='max-w-7xl mx-auto mt-3 px-10 mb-20 md:px-0'>
       <div className='flex flex-col lg:flex-row justify-between gap-10'>
 
         {/* left */}

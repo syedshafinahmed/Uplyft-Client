@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <section
-      className="bg-base-200 py-15 px-4"
+      className="py-15 px-4"
     >
       <div className="max-w-7xl mx-auto grid gap-8 lg:grid-cols-2 px-5">
 

@@ -50,7 +50,7 @@ const How = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="min-h-screen bg-indigo-50 dark:bg-gray-900 py-16 px-4">
+    <section className="min-h-screen py-16 px-4">
       <div className="max-w-7xl mx-auto">
 
         <div className="flex flex-col md:flex-row justify-between items-start">
