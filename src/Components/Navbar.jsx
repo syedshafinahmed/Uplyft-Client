@@ -80,7 +80,7 @@ const Navbar = () => {
                     >
                       {/* <li className='text-violet-500 font-bold text-sm md:text-xl pl-3 py-2 text-start'>{user.displayName}</li> */}
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/'>Home</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/profile'>Profile</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/dashboard/profile'>Profile</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/dashboard'>Dashboard</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/joined-events'>Joined Events</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/manage-events'>Manage Events</NavLink></li>

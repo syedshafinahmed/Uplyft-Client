@@ -19,6 +19,8 @@ import EventDetails from './events/EventDetails.jsx';
 import About from './Components/About.jsx';
 import Contact from './Components/Contact.jsx';
 import How from './Components/How.jsx';
+import Dashboard from './Components/Dashboard/Dashboard.jsx';
+import Profile from './Components/Dashboard/Profile.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -79,9 +81,18 @@ const router = createBrowserRouter([
         path: '/register',
         element: <Register></Register>
       },
-
     ]
   },
+  {
+    path: '/dashboard',
+    element: <Dashboard></Dashboard>,
+    children: [
+      {
+        path: 'profile',
+        Component: Profile
+      }
+    ]
+  }
 ]);
 
 

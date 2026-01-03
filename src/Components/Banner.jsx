@@ -14,7 +14,7 @@ import l5 from '../assets/l5.png';
 import l6 from '../assets/l6.png';
 import l7 from '../assets/l7.png';
 import l8 from '../assets/l8.png';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { IoMail } from 'react-icons/io5';
 
 const Banner = () => {
@@ -91,11 +91,11 @@ const Banner = () => {
                 </p>
               </div>
 
-              <div className='bg-indigo-800 dark:bg-violet-600 p-4 sm:p-5 rounded-xl text-base-200 font-black text-xl sm:text-2xl flex justify-center mt-3'>
+              <Link to='/contact' className='bg-indigo-800 dark:bg-violet-600 p-4 sm:p-5 rounded-xl text-base-200 font-black text-xl sm:text-2xl flex justify-center mt-3'>
                 <span className='flex gap-2 items-center hover:scale-110 transition-all duration-300 ease-out'>
                   <IoMail /> Contact Us
                 </span>
-              </div>
+              </Link>
             </div>
 
             <div className='rounded-xl overflow-hidden flex-1'>
