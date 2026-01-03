@@ -72,7 +72,7 @@ const DashboardHome = () => {
         setCreatedCount(createdData.length);
         setUpcomingCount(upcomingData.length);
         setLatestJoined(joinedData[0] || null);
-        setLatestCreated(createdData[0] || null);
+        setLatestCreated(createdData?.at(-1) ?? null);
       })
       .catch((err) => console.error(err))
       .finally(() => setFetching(false));
@@ -200,7 +200,7 @@ const DashboardHome = () => {
             {/* Latest Created Event */}
             {latestCreated ? (
               <div className="space-y-4">
-                <p className="text-sm font-medium">Most Recent Created Event</p>
+                <p className="text-sm font-medium">Latest Event you Created</p>
                 <EventCard event={latestCreated} />
               </div>
             ) : (
@@ -210,7 +210,7 @@ const DashboardHome = () => {
             {/* Latest Joined Event */}
             {latestJoined ? (
               <div className="space-y-4">
-                <p className="text-sm font-medium">Most Recent Joined Event</p>
+                <p className="text-sm font-medium">Your Next Scheduled Event</p>
                 <EventCard event={latestJoined} />
               </div>
             ) : (

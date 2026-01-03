@@ -81,7 +81,7 @@ const JoinedEvents = () => {
             You haven’t joined any events yet.
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 pb-30">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-5 pb-30">
             {joinedEvents.map((event) => (
               <div key={event.id} className="bg-base-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-indigo-800/20 dark:border-violet-600/20">
                 <figure className="overflow-hidden rounded-t-2xl">

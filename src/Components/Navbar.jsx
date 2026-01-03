@@ -77,7 +77,7 @@ const Navbar = () => {
 
                     <ul
                       tabIndex={0}
-                      className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-32 text-sm"
+                      className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-36 text-sm"
                     >
                       {/* <li className='text-violet-500 font-bold text-sm md:text-xl pl-3 py-2 text-start'>{user.displayName}</li> */}
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/'>Home</NavLink></li>

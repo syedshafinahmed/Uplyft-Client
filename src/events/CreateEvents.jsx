@@ -39,7 +39,7 @@ const CreateEvents = () => {
           text: `${formData.title} has been added.`,
           confirmButtonColor: '#4F46E5',
         }).then(() => {
-          navigate('/upcoming-events');
+          navigate('/manage-events');
         });
         e.target.reset();
         setEventDate(null);

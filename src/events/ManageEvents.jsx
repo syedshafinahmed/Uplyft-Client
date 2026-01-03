@@ -64,7 +64,7 @@ const ManageEvents = () => {
                 You haven't created any events yet.
               </p>
             )
-            : events.map((event) => (
+            : [...events].reverse().map((event) => (
               <div
                 key={event._id}
                 className="bg-base-200 rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-indigo-800/20 dark:border-violet-600/20"
