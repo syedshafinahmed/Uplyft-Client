@@ -76,13 +76,15 @@ const Navbar = () => {
 
                     <ul
                       tabIndex={0}
-                      className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-44 text-sm"
+                      className="dropdown-content menu p-2 shadow bg-base-200 rounded-box w-32 text-sm"
                     >
-                      <li className='text-violet-500 font-bold text-sm md:text-xl pl-3 py-2 text-start'>{user.displayName}</li>
-                      <li><NavLink to='/'>Home</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/joined-events'>Joined Events</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/manage-events'>Manage Events</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-xs md:text-sm' to='/create-event'>Create Event</NavLink></li>
+                      {/* <li className='text-violet-500 font-bold text-sm md:text-xl pl-3 py-2 text-start'>{user.displayName}</li> */}
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/'>Home</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/profile'>Profile</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/dashboard'>Dashboard</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/joined-events'>Joined Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/manage-events'>Manage Events</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/create-event'>Create Event</NavLink></li>
                       <li><button
                         onClick={() =>
                           signOutUser()
@@ -103,7 +105,7 @@ const Navbar = () => {
                               });
                             })
                         }
-                        className="text-violet-500 font-medium text-xs md:text-sm"
+                        className="text-violet-500 font-medium text-xs"
                       >
                         Logout
                       </button></li>
