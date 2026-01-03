@@ -50,7 +50,7 @@ const How = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="min-h-screen py-16 px-4 overflow-x-hidden">
+    <section className="py-16 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
 
         {/* Header */}
@@ -107,7 +107,7 @@ const How = () => {
                     whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
                     exit={{ scale: 0.5, opacity: 0, rotate: 45 }}
                     viewport={{ once: false }}
-                    transition={{ duration: 0.5, type: "spring", stiffness: 300 }}
+                    transition={{ duration: 0.1, type: "spring", stiffness: 300 }}
                     className="w-20 h-20 rounded-full bg-transparent flex items-center justify-center text-5xl text-indigo-800 dark:text-violet-600"
                   >
                     {steps[activeStep].icon}
@@ -158,7 +158,7 @@ const How = () => {
               whileInView={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -40 }}
               viewport={{ once: false }}
-              transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+              transition={{ duration: 0.3, type: "spring", stiffness: 120 }}
               className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center bg-white dark:bg-gray-800 rounded-2xl shadow-xl"
             >
               {/* Image */}
