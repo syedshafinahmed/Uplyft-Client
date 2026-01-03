@@ -13,7 +13,7 @@ const steps = [
     title: "Discover Events",
     desc: "Find meaningful events and causes that align with your passion.",
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80",
+      "https://i.postimg.cc/bNFDxMFT/premium-photo-1664284792972-4aa8cbd57766.avif",
     longDesc:
       "Discover a wide range of community-driven events tailored to your interests. Explore causes, browse curated listings, and stay informed about opportunities where your presence can make a real difference. Whether it's volunteering, awareness campaigns, or local initiatives, finding the right event is effortless and inspiring.",
   },
@@ -40,7 +40,7 @@ const steps = [
     title: "Make an Impact",
     desc: "Turn participation into real social change.",
     image:
-      "https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=800&q=80",
+      "https://i.postimg.cc/rFbs04Kh/photo-1710093072218-0024b8391475-(1).avif",
     longDesc:
       "See the real-world results of your actions. Track participation, measure outcomes, and share success stories that inspire others. Uplyft transforms collective efforts into lasting social impact, empowering communities to grow and thrive together.",
   },
@@ -50,9 +50,10 @@ const How = () => {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <section className="min-h-screen py-16 px-4">
+    <section className="min-h-screen py-16 px-4 overflow-x-hidden">
       <div className="max-w-7xl mx-auto">
 
+        {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start">
           <div className="text-start mb-10">
             <h1 className="text-4xl sm:text-5xl font-black text-indigo-800 dark:text-violet-600">
@@ -88,12 +89,13 @@ const How = () => {
                   strokeLinecap="round"
                   className="fill-none stroke-indigo-800 dark:stroke-violet-600"
                   strokeDasharray={2 * Math.PI * 50}
-                  animate={{
+                  initial={{ strokeDashoffset: 2 * Math.PI * 50 }}
+                  whileInView={{
                     strokeDashoffset:
-                      2 * Math.PI * 50 *
-                      (1 - (activeStep + 1) / steps.length),
+                      2 * Math.PI * 50 * (1 - (activeStep + 1) / steps.length),
                   }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: "easeInOut" }}
                 />
               </svg>
 
@@ -101,10 +103,11 @@ const How = () => {
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeStep}
-                    initial={{ scale: 0.6, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.6, opacity: 0 }}
-                    transition={{ duration: 0.35 }}
+                    initial={{ scale: 0.5, opacity: 0, rotate: -45 }}
+                    whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
+                    exit={{ scale: 0.5, opacity: 0, rotate: 45 }}
+                    viewport={{ once: false }}
+                    transition={{ duration: 0.5, type: "spring", stiffness: 300 }}
                     className="w-20 h-20 rounded-full bg-transparent flex items-center justify-center text-5xl text-indigo-800 dark:text-violet-600"
                   >
                     {steps[activeStep].icon}
@@ -126,55 +129,72 @@ const How = () => {
                   ? "bg-white dark:bg-gray-800 border-indigo-800 dark:border-violet-600 shadow-xl scale-105"
                   : "bg-white/70 dark:bg-gray-800/50 border-transparent hover:shadow-lg"
                 }`}
-              whileHover={{ y: -6 }}
+              whileHover={{ y: -8, scale: 1.03 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              viewport={{ once: false }}
+              transition={{ type: "spring", stiffness: 300 }}
             >
               <h3 className="font-black text-xl text-end text-indigo-800 dark:text-violet-600">
                 {step.title}
               </h3>
-              <div
-                className="absolute -top-5 left-5 w-10 h-10 
-             text-indigo-800 dark:text-violet-600 border border-indigo-800 dark:border-violet-600 rounded-xl bg-white dark:bg-gray-900
-             flex items-center justify-center text-2xl shadow-xl"
+              <motion.div
+                className="absolute -top-5 left-5 w-10 h-10 text-indigo-800 dark:text-violet-600 border border-indigo-800 dark:border-violet-600 rounded-xl bg-white dark:bg-gray-900 flex items-center justify-center text-2xl shadow-xl"
+                whileHover={{ scale: 1.2, rotate: 15 }}
+                transition={{ type: "spring", stiffness: 300 }}
               >
                 {step.icon}
-              </div>
+              </motion.div>
             </motion.div>
           ))}
         </div>
-
 
         {/* Step Detail Section */}
         <div className="max-w-7xl mx-auto mt-10 mb-20 px-2 sm:px-0">
           <AnimatePresence mode="wait">
             <motion.div
               key={activeStep}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 30 }}
-              transition={{ duration: 0.4 }}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -40 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
               className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-center bg-white dark:bg-gray-800 rounded-2xl shadow-xl"
             >
               {/* Image */}
-              <div className="overflow-hidden rounded-tl-2xl rounded-bl-2xl md:rounded-bl-2xl md:rounded-tr-none rounded-tr-2xl">
+              <motion.div
+                className="overflow-hidden rounded-tl-2xl rounded-bl-2xl md:rounded-bl-2xl md:rounded-tr-none rounded-tr-2xl"
+                initial={{ scale: 1.05, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 1.05, opacity: 0 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <motion.img
                   src={steps[activeStep].image}
                   alt={steps[activeStep].title}
                   className="w-full h-64 sm:h-64 md:h-64 object-cover"
-                  initial={{ scale: 1.05 }}
-                  animate={{ scale: 1 }}
-                  transition={{ duration: 0.6 }}
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.5 }}
                 />
-              </div>
+              </motion.div>
 
               {/* Text */}
-              <div className="px-4 sm:px-6 md:px-8 py-4 md:pr-20">
+              <motion.div
+                className="px-4 sm:px-6 md:px-8 py-4 md:pr-20"
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -50 }}
+                viewport={{ once: false }}
+                transition={{ duration: 0.6 }}
+              >
                 <h2 className="text-2xl font-black text-indigo-800 dark:text-violet-600 mb-3 text-center md:text-left">
                   {steps[activeStep].title}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 text-justify leading-relaxed ">
                   {steps[activeStep].longDesc}
                 </p>
-              </div>
+              </motion.div>
             </motion.div>
           </AnimatePresence>
         </div>
