@@ -146,9 +146,9 @@ const Features = () => {
               {/* Floating Icon */}
               <motion.div
                 whileHover={{ scale: 1.2, rotate: 10 }}
-                className="bg-base-200 dark:bg-gray-800 p-3 rounded-full mb-6 shadow-md flex items-center justify-center hover:bg-indigo-800 dark:hover:bg-violet-600 transition-all"
+                className="bg-indigo-800/20 dark:bg-violet-600/20 p-3 rounded-full mb-6 shadow-md flex items-center justify-center transition-all"
               >
-                <Icon className="text-indigo-800 dark:text-violet-600 hover:text-base-200 text-4xl" />
+                <Icon className="text-indigo-800 dark:text-violet-600 text-4xl" />
               </motion.div>
 
               {/* Title */}
