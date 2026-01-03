@@ -107,7 +107,7 @@ const How = () => {
                     whileInView={{ scale: 1, opacity: 1, rotate: 0 }}
                     exit={{ scale: 0.5, opacity: 0, rotate: 45 }}
                     viewport={{ once: false }}
-                    transition={{ duration: 0.1, type: "spring", stiffness: 300 }}
+                    transition={{ duration: 0.05, type: "spring", stiffness: 300 }}
                     className="w-20 h-20 rounded-full bg-transparent flex items-center justify-center text-5xl text-indigo-800 dark:text-violet-600"
                   >
                     {steps[activeStep].icon}

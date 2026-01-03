@@ -116,7 +116,7 @@ const Dashboard = () => {
             <Switch theme={theme} handleTheme={handleTheme} />
             <div className="w-10 h-10 rounded-full border-2 border-indigo-800 dark:border-violet-500 overflow-hidden">
               <img
-                src={user.photoURL || "https://via.placeholder.com/150"}
+                src={user?.photoURL || "https://via.placeholder.com/150"}
                 alt="User"
                 className="w-full h-full object-cover"
                 referrerPolicy="no-referrer"

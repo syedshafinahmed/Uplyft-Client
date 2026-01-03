@@ -36,7 +36,9 @@
 }
 
 
-
+/* body{
+  overflow-x: hidden;
+} */
 
 
 li .active {

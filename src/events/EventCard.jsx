@@ -12,7 +12,7 @@ const EventCard = ({ event }) => {
         <img
           src={thumbnail_url}
           alt={title}
-          className="w-full h-56 object-cover transition-transform duration-500 hover:scale-110"
+          className="w-full h-46 object-cover transition-transform duration-500 hover:scale-110"
         />
       </figure>
 

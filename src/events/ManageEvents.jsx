@@ -30,7 +30,7 @@ const ManageEvents = () => {
           key={index}
           className="bg-base-200 rounded-2xl shadow-md animate-pulse border border-indigo-800/20 dark:border-violet-600/20"
         >
-          <div className="w-full h-56 bg-gray-300 dark:bg-gray-700 rounded-t-2xl"></div>
+          <div className="w-full h-46 bg-gray-300 dark:bg-gray-700 rounded-t-2xl"></div>
           <div className="p-5 space-y-2">
             <div className="h-5 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
             <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
@@ -73,7 +73,7 @@ const ManageEvents = () => {
                   <img
                     src={event.thumbnail_url}
                     alt={event.title}
-                    className="w-full h-56 object-cover transition-transform duration-500 hover:scale-110"
+                    className="w-full h-46 object-cover transition-transform duration-500 hover:scale-110"
                   />
                 </figure>
                 <div className="p-5 space-y-2 text-left">

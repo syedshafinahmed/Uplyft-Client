@@ -48,12 +48,6 @@ const UpcomingEvents = () => {
       <div className="h-10 md:h-14 w-3/4 bg-gray-300 dark:bg-gray-700 rounded mb-2"></div>
       <div className="h-6 md:h-8 w-1/2 bg-gray-300 dark:bg-gray-700 rounded mb-10"></div>
 
-      {/* Search + Filter */}
-      <div className="flex flex-col md:flex-row gap-4 mb-10">
-        <div className="h-10 bg-gray-300 dark:bg-gray-700 rounded w-full md:w-1/3"></div>
-        <div className="h-10 bg-gray-300 dark:bg-gray-700 rounded w-full md:w-1/4"></div>
-      </div>
-
       {/* Event cards */}
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 pb-40">
         {Array(8)
@@ -63,7 +57,7 @@ const UpcomingEvents = () => {
               key={index}
               className="bg-base-200 rounded-2xl shadow-md border border-indigo-800/20 dark:border-violet-600/20"
             >
-              <div className="w-full h-56 bg-gray-300 dark:bg-gray-700 rounded-t-2xl"></div>
+              <div className="w-full h-46 bg-gray-300 dark:bg-gray-700 rounded-t-2xl"></div>
               <div className="p-5 space-y-2">
                 <div className="h-5 bg-gray-300 dark:bg-gray-700 rounded w-3/4"></div>
                 <div className="h-3 bg-gray-300 dark:bg-gray-700 rounded w-1/2"></div>
@@ -95,37 +89,7 @@ const UpcomingEvents = () => {
         </p>
       </div>
 
-      <div className="flex flex-col md:flex-row items-center justify-between py-5 gap-4 mb-10">
-        <div className="relative w-full md:w-1/3">
-          <input
-            type="text"
-            placeholder="Search events by name..."
-            className="input border border-indigo-800 outline-none input-bordered w-full rounded-full pr-28"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-          />
-          <button
-            onClick={handleSearch}
-            className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-xs font-semibold px-6 py-3 rounded-tr-full rounded-br-full hover:from-violet-500 hover:to-indigo-800"
-          >
-            Search
-          </button>
-        </div>
-
-        <select
-          className="select select-bordered outline-0 border border-indigo-800 rounded-full w-full md:w-1/4"
-          value={selectedType}
-          onChange={(e) => setSelectedType(e.target.value)}
-        >
-          <option value="">Filter Event Type</option>
-          {allEventTypes.map((type) => (
-            <option key={type} value={type}>
-              {type}
-            </option>
-          ))}
-        </select>
-      </div>
+      
 
       {events.length === 0 ? (
         <p className="text-center text-gray-600 text-lg min-h-screen">No events found.</p>
