@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
 
-const UpcomingEvents = () => {
+const AllEvents = () => {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedType, setSelectedType] = useState("");
   const [allEventTypes, setAllEventTypes] = useState([]);
+
+  //  pagination state
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 8;
 
   useEffect(() => {
     fetch("https://uplyft-server.vercel.app/events")
@@ -21,6 +25,8 @@ const UpcomingEvents = () => {
 
   useEffect(() => {
     setLoading(true);
+    setCurrentPage(1);
+
     const params = new URLSearchParams();
     if (selectedType) params.append("type", selectedType);
     if (searchQuery) params.append("search", searchQuery);
@@ -41,7 +47,6 @@ const UpcomingEvents = () => {
     setSearchQuery(searchTerm);
   };
 
-  // Skeleton loader for the whole page
   const renderSkeleton = () => (
     <div className="max-w-7xl mx-auto mt-10 px-5 md:px-0 animate-pulse">
       {/* Header */}
@@ -84,17 +89,28 @@ const UpcomingEvents = () => {
 
   if (loading) return renderSkeleton();
 
+  //  pagination calculations
+  const reversedEvents = [...events].reverse();
+  const totalPages = Math.ceil(reversedEvents.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentEvents = reversedEvents.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
+
   return (
     <div className="max-w-7xl mx-auto px-5 md:px-0">
+      {/* HEADER */}
       <div className="text-start mt-10 mb-8">
         <p className="text-2xl md:text-5xl font-extrabold text-indigo-800 dark:text-violet-600">
-          Get Ready for What's Coming!
+          Where Moments Become Memories!
         </p>
         <p className="text-xl mt-2 font-semibold text-indigo-800 dark:text-violet-600">
-          Something inspiring awaits.
+          Join events that bring people together.
         </p>
       </div>
 
+      {/* SEARCH & FILTER */}
       <div className="flex flex-col md:flex-row items-center justify-between py-5 gap-4 mb-10">
         <div className="relative w-full md:w-1/3">
           <input
@@ -107,7 +123,7 @@ const UpcomingEvents = () => {
           />
           <button
             onClick={handleSearch}
-            className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-xs font-semibold px-6 py-3 rounded-tr-full rounded-br-full hover:from-violet-500 hover:to-indigo-800"
+            className="absolute top-1/2 right-0 -translate-y-1/2 z-10 bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 text-xs font-semibold px-6 py-3 rounded-tr-full rounded-br-full"
           >
             Search
           </button>
@@ -127,17 +143,73 @@ const UpcomingEvents = () => {
         </select>
       </div>
 
-      {events.length === 0 ? (
-        <p className="text-center text-gray-600 text-lg min-h-screen">No events found.</p>
+      {/* EVENTS GRID */}
+      {currentEvents.length === 0 ? (
+        <p className="text-center text-gray-600 text-lg min-h-screen">
+          No events found.
+        </p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-4 px-5 md:px-0 gap-5 pb-40">
-          {events.slice(0, 4).map((event) => (
-            <EventCard key={event._id} event={event} />
-          ))}
-        </div>
+        <>
+          <div className="grid grid-cols-1 md:grid-cols-4 px-5 md:px-0 gap-5 pb-20">
+            {currentEvents.map((event) => (
+              <EventCard key={event._id} event={event} />
+            ))}
+          </div>
+
+          {/* PAGINATION */}
+          <div className="flex justify-center items-center gap-2 pb-40">
+            {/* Previous */}
+            <button
+              disabled={currentPage === 1}
+              onClick={() => setCurrentPage((p) => p - 1)}
+              className={`btn btn-sm transition-all
+      ${currentPage === 1
+                  ? "bg-gray-500 text-white cursor-not-allowed"
+                  : "bg-indigo-800 dark:bg-violet-600 text-white dark:text-gray-900 hover:opacity-90"
+                }`}
+            >
+              Previous
+            </button>
+
+            {/* Page Numbers */}
+            {[...Array(totalPages).keys()].map((num) => {
+              const page = num + 1;
+              const isActive = currentPage === page;
+
+              return (
+                <button
+                  key={page}
+                  onClick={() => setCurrentPage(page)}
+                  className={`btn btn-sm transition-all
+          ${isActive
+                      ? "bg-indigo-800 dark:bg-violet-600 text-white dark:text-gray-900 hover:opacity-90"
+                      : "bg-gray-500 text-white dark:text-gray-900 hover:opacity-80"
+                    }`}
+                >
+                  {page}
+                </button>
+              );
+            })}
+
+            {/* Next */}
+            <button
+              disabled={currentPage === totalPages}
+              onClick={() => setCurrentPage((p) => p + 1)}
+              className={`btn btn-sm transition-all
+      ${currentPage === totalPages
+                  ? "bg-gray-500 text-white cursor-not-allowed"
+                  : "bg-indigo-800 dark:bg-violet-600 text-white dark:text-gray-900 hover:opacity-90"
+                }`}
+            >
+              Next
+            </button>
+          </div>
+
+
+        </>
       )}
     </div>
   );
 };
 
-export default UpcomingEvents;
+export default AllEvents;

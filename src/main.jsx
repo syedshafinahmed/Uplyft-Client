@@ -21,6 +21,8 @@ import Contact from './Components/Contact.jsx';
 import How from './Components/How.jsx';
 import Dashboard from './Components/Dashboard/Dashboard.jsx';
 import Profile from './Components/Dashboard/Profile.jsx';
+import DashboardHome from './Components/Dashboard/DashboardHome.jsx';
+import AllEvents from './events/AllEvents.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -49,6 +51,11 @@ const router = createBrowserRouter([
       {
         path: '/upcoming-events',
         element: <UpcomingEvents></UpcomingEvents>,
+        loader: () => fetch('https://uplyft-server.vercel.app/events')
+      },
+      {
+        path: '/all-events',
+        element: <AllEvents></AllEvents>,
         loader: () => fetch('https://uplyft-server.vercel.app/events')
       },
       {
@@ -90,6 +97,10 @@ const router = createBrowserRouter([
       {
         path: 'profile',
         Component: Profile
+      },
+      {
+        path: 'dashboard-home',
+        Component: DashboardHome
       }
     ]
   }

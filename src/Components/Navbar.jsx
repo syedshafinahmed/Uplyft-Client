@@ -22,6 +22,7 @@ const Navbar = () => {
       <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/about'>About</NavLink></li>
       <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/how-it-works'>How it works</NavLink></li>
       <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/contact'>Contact</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/all-events'>All Events</NavLink></li>
       <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (
@@ -81,7 +82,7 @@ const Navbar = () => {
                       {/* <li className='text-violet-500 font-bold text-sm md:text-xl pl-3 py-2 text-start'>{user.displayName}</li> */}
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/'>Home</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/dashboard/profile'>Profile</NavLink></li>
-                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/dashboard'>Dashboard</NavLink></li>
+                      <li><NavLink className='text-violet-500 font-medium text-xs' to='/dashboard/dashboard-home'>Dashboard</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/joined-events'>Joined Events</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/manage-events'>Manage Events</NavLink></li>
                       <li><NavLink className='text-violet-500 font-medium text-xs' to='/create-event'>Create Event</NavLink></li>

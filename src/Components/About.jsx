@@ -39,7 +39,7 @@ const About = () => {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: stat.delay, duration: 0.5 }}
-                className="bg-base-100 dark:bg-gray-900 p-6 rounded-xl shadow-2xl text-center min-w-[240px] md:min-w-0"
+                className="bg-base-100 dark:bg-gray-900 p-6 rounded-xl shadow-2xl text-center min-w-60 md:min-w-0"
               >
                 <div className="text-indigo-800 dark:text-violet-600 text-4xl font-bold">
                   <CountUp end={stat.count} duration={2} />+
