@@ -4,7 +4,6 @@ import { NavLink } from 'react-router';
 import { AuthContext } from '../context/AuthContext';
 import Swal from 'sweetalert2';
 import Switch from '../toggle/Switch';
-import { NavHashLink } from 'react-router-hash-link';
 const Navbar = () => {
   const { user, signOutUser } = use(AuthContext);
   const [theme, setTheme] = useState(localStorage.getItem('theme') || "light")
@@ -19,11 +18,11 @@ const Navbar = () => {
   }, [theme])
   const links =
     <>
-      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/'>Home</NavLink></li>
-      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/about'>About</NavLink></li>
-      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/how-it-works'>How it works</NavLink></li>
-      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/contact'>Contact</NavLink></li>
-      <li><NavLink className='text-indigo-800 dark:text-violet-600 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/'>Home</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/about'>About</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/how-it-works'>How it works</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/contact'>Contact</NavLink></li>
+      <li><NavLink className='text-indigo-800 dark:text-gray-300 font-bold text-sm' to='/upcoming-events'>Upcoming Events</NavLink></li>
     </>
   return (
     <div className="sticky top-0 w-full z-50">
@@ -45,8 +44,8 @@ const Navbar = () => {
             </div>
             <div>
               <div className='flex'>
-                <RiCommunityFill size={30} className='text-indigo-800 dark:text-violet-600 hidden md:block' />
-                <NavLink to='/'><span className='bg-indigo-800 dark:bg-violet-600 bg-clip-text text-transparent text-2xl font-black'>Uplyft</span></NavLink>
+                <RiCommunityFill size={30} className='text-indigo-800 dark:text-gray-300 hidden md:block' />
+                <NavLink to='/'><span className='bg-indigo-800 dark:bg-gray-300 bg-clip-text text-transparent text-2xl font-black'>Uplyft</span></NavLink>
               </div>
             </div>
           </div>
@@ -95,7 +94,6 @@ const Navbar = () => {
                                 timer: 2000,
                                 showConfirmButton: false,
                               });
-                              // console.log("Logged out");
                             })
                             .catch(err => {
                               Swal.fire({
@@ -109,40 +107,8 @@ const Navbar = () => {
                       >
                         Logout
                       </button></li>
-                      {/* <li className='w-full'>
-                        <div className='flex items-center gap-3'>
-                          <p className="text-violet-500 font-medium text-xs">{theme === "dark" ? "Dark" : "Light"} Mode</p>
-                          <Switch theme={theme} handleTheme={handleTheme}></Switch>
-                        </div>
-                      </li> */}
                     </ul>
                   </div>
-{/* 
-                  <button
-                    onClick={() =>
-                      signOutUser()
-                        .then(() => {
-                          Swal.fire({
-                            icon: 'success',
-                            title: 'Logged Out!',
-                            text: 'You have successfully logged out.',
-                            timer: 2000,
-                            showConfirmButton: false,
-                          });
-                          // console.log("Logged out");
-                        })
-                        .catch(err => {
-                          Swal.fire({
-                            icon: 'error',
-                            title: 'Logout Failed!',
-                            text: err.message,
-                          });
-                        })
-                    }
-                    className="btn btn-xs md:btn-sm text-base-200 rounded-full border-none text-xs font-bold w-16 md:w-20 bg-linear-to-b from-indigo-800 to-violet-500"
-                  >
-                    Logout
-                  </button> */}
                 </div>
                 ) :
                 (<div className="flex items-center gap-1 md:gap-3">

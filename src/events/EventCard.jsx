@@ -32,7 +32,7 @@ const EventCard = ({ event }) => {
             <NavLink
               to={`/event-details/${_id}`}
               className="group flex items-center justify-center w-10 h-10 rounded-full hover:bg-indigo-800 dark:hover:bg-violet-600 
-               transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+               transition-all duration-300"
               aria-label="View event details"
             >
               <BsBoxArrowUpRight
@@ -43,16 +43,6 @@ const EventCard = ({ event }) => {
             </NavLink>
           </Tooltip>
         </div>
-
-        {/* <div className="text-sm text-gray-500 space-y-0.5">
-          <p><span className="font-medium text-xs text-gray-800">Created by:</span> {created_by}</p>
-        </div>
-
-        <p className="line-clamp-2 text-sm text-gray-700">{description}</p> */}
-
-        {/* <NavLink to={`/event-details/${_id}`} className="btn w-full mt-2 py-2 border-none rounded-full bg-indigo-800 dark:bg-violet-600/80 text-base-200 text-sm font-semibold transition-all duration-300">
-          View Event
-        </NavLink> */}
       </div>
     </div>
   );

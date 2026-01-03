@@ -47,7 +47,7 @@ const Footer = () => {
             <li><NavLink className='hover:underline transition-all' to='/about'>About</NavLink></li>
             <li><NavLink className='hover:underline transition-all' to='/how-it-works'>How it works</NavLink></li>
             <li><NavLink className='hover:underline transition-all' to='/contact'>Contact</NavLink></li>
-            <li><NavLink className='hover:underline transition-all' to='/create-event'>Create Event</NavLink></li>
+            <li><NavLink className='hover:underline transition-all' to='/upcoming-events'>Upcoming Events</NavLink></li>
 
           </ul>
         </div>
