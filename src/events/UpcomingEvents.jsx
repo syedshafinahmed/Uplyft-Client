@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import EventCard from "./EventCard";
+import { Link } from "react-router";
 
 const UpcomingEvents = () => {
   const [events, setEvents] = useState([]);
@@ -89,17 +90,22 @@ const UpcomingEvents = () => {
         </p>
       </div>
 
-      
+
 
       {events.length === 0 ? (
         <p className="text-center text-gray-600 text-lg min-h-screen">No events found.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-4 px-5 md:px-0 gap-5 pb-40">
+        <div className="grid grid-cols-1 md:grid-cols-4 px-5 md:px-0 gap-5">
           {events.slice(0, 4).map((event) => (
             <EventCard key={event._id} event={event} />
           ))}
         </div>
       )}
+      <div className="text-end mt-10 pb-40">
+        <Link to='/all-events' className="btn bg-base-200 border border-indigo-800 dark:border-violet-600  text-indigo-800 dark:text-violet-600 text-xs font-semibold rounded-full">
+          View All Events
+        </Link>
+      </div>
     </div>
   );
 };

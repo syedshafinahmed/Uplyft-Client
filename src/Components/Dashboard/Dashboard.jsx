@@ -45,6 +45,7 @@ const Dashboard = () => {
   const links = [
     { name: "Home", to: "/" },
     { name: "Profile", to: "/dashboard/profile" },
+    { name: "All Events", to: "/all-events" },
     { name: "Upcoming Events", to: "/upcoming-events" },
     { name: "Joined Events", to: "/joined-events" },
     { name: "Manage Events", to: "/manage-events" },

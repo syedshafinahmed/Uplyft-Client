@@ -55,8 +55,8 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <div className="flex items-center gap-4">
-            <div className='w-full hidden md:block'>
+          <div className="flex items-center gap-1 md:gap-4">
+            <div className='w-full'>
               <div className='flex items-center'>
                 <Switch theme={theme} handleTheme={handleTheme}></Switch>
               </div>
