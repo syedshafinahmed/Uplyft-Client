@@ -48,12 +48,29 @@ npm run build
 
 ## Home Page
 
-<img width="full" alt="uplyft-home" src="https://github.com/user-attachments/assets/4eac1f17-d997-45e5-9321-f09d555b5cb3" /> <br>
 
-- A vibrant, community-inspired banner section enhanced with **Framer Motion** animations, creating a smooth, modern, and engaging first impression.
-- Visually rich feature highlights, animated with **Framer Motion** to deliver an interactive, dynamic feel as users explore the platform’s core strengths.
-- A beautifully curated gallery section, built with **Swiper.js**, allowing users to glide through inspiring community event visuals with smooth, responsive slides.
-- An elegantly designed newsletter section, powered by **AOS** for subtle scroll-triggered animations that elevate user engagement (UI only).
+<img width="full" alt="Uplyft-Home" src="https://github.com/user-attachments/assets/ed7bd792-0faa-4352-af59-1fb312a003b3" /> <br>
+
+- **Banner:** Engaging, animated with Framer Motion for a smooth first impression.
+- **How It Works:** Step-by-step guide with interactive Framer Motion effects.
+- **Features:** Highlighted with animations using Framer Motion.
+- **Gallery:** Swipe through images using Swiper.js, fully responsive.
+- **Team:** Showcases members with clean layouts and hover effects (Tailwind CSS).
+- **Newsletter:** Scroll-triggered animations powered by AOS.
+- **FAQ:** Expandable panels with smooth animations (React + Tailwind CSS).
+- **Contact:** Simple, responsive form built with React + Tailwind CSS.
+
+---
+
+## About Page
+
+<img width="full" alt="Uplyft-About" src="https://github.com/user-attachments/assets/0f83e8ad-0060-4e47-90b4-46b643c72ad3" />
+
+- Banner with overlay and animated title using **React + Framer Motion**  
+- Animated stats for events, participants, cities, and organizers using **React CountUp + Framer Motion**  
+- Multi-column success stories gallery with hover effects using **Framer Motion**  
+- Skeleton loading placeholders for smooth user experience using **React + Tailwind CSS**  
+- Smooth image hover scaling in gallery using **Tailwind CSS + Framer Motion**
 
 ---
 
