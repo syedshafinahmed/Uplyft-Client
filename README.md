@@ -139,8 +139,9 @@ npm run build
 ## Authentication (Firebase)
 
 <div align="center">
-  <img alt="uplyft-login" src="https://github.com/user-attachments/assets/a96f836c-105e-4be0-be6b-b62d37520376" style="width: 44%"/> &nbsp;&nbsp;
-  <img alt="uplyft-register" src="https://github.com/user-attachments/assets/71b6ed4a-5b15-49b6-8974-944ecb0f0f7b" style="width: 44%" />
+  <img alt="Uplyft-Login" src="https://github.com/user-attachments/assets/6a1a6a5d-4697-4324-b2a3-70a826be900d" style="width: 44%" /> &nbsp;&nbsp;
+  <img alt="Uplyft-Register" src="https://github.com/user-attachments/assets/a61ba67e-b471-4d09-90e6-764b9fe53b25" style="width: 44%" />
+
 </div> <br>
 
 - Secure **Email/Password** Authentication allowing users to register and log in safely.
