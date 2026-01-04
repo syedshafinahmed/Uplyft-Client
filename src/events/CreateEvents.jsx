@@ -58,7 +58,7 @@ const CreateEvents = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen pt-10 pb-40">
-      <div className="card bg-base-200 border-2 border-indigo-800 w-xl mx-auto shadow-2xl rounded-2xl">
+      <div className="card bg-base-200 border border-indigo-800 dark:border-violet-600 w-xl mx-auto shadow-2xl rounded-2xl">
         <div className="card-body p-10">
           <h2 className="text-3xl text-center font-black mb-6 bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent">
             Create New Event
@@ -72,7 +72,7 @@ const CreateEvents = () => {
                 name="title"
                 required
                 placeholder="Enter event title"
-                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800"
+                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600"
               />
             </div>
 
@@ -82,7 +82,7 @@ const CreateEvents = () => {
                 name="event_type"
                 required
                 defaultValue=""
-                className="select w-full rounded-full focus:border-0 focus:outline-indigo-800"
+                className="select w-full rounded-full border-none focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600"
               >
                 <option value="" disabled>Select event type</option>
                 <option value="Cleanup">Cleanup</option>
@@ -102,7 +102,7 @@ const CreateEvents = () => {
                 onChange={(date) => setEventDate(date)}
                 minDate={new Date()}
                 placeholderText="Select event date"
-                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800"
+                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600"
                 dateFormat="MMMM d, yyyy"
               />
             </div>
@@ -114,7 +114,7 @@ const CreateEvents = () => {
                 name="location"
                 required
                 placeholder="Enter event location"
-                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800"
+                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600"
               />
             </div>
 
@@ -125,7 +125,7 @@ const CreateEvents = () => {
                 name="thumbnail_url"
                 required
                 placeholder="https://example.com/image.jpg"
-                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800"
+                className="input w-full rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600"
               />
             </div>
 
@@ -136,7 +136,7 @@ const CreateEvents = () => {
                 rows="5"
                 required
                 placeholder="Enter event description"
-                className="textarea w-full rounded-2xl focus:border-0 focus:outline-indigo-800"
+                className="textarea w-full rounded-2xl focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600"
               ></textarea>
             </div>
 
