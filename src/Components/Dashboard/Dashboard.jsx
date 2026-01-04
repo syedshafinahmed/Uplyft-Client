@@ -44,6 +44,7 @@ const Dashboard = () => {
 
   const links = [
     { name: "Home", to: "/" },
+    { name: "Dashboard", to: "/dashboard/dashboard-home" },
     { name: "Profile", to: "/dashboard/profile" },
     { name: "All Events", to: "/all-events" },
     { name: "Upcoming Events", to: "/upcoming-events" },
@@ -99,7 +100,7 @@ const Dashboard = () => {
       {/* Sidebar toggle icon */}
       <button
         onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-        className="absolute bottom-20 left-0 z-50 p-2 bg-white dark:bg-gray-800 border-r border-gray-300 dark:border-gray-700 rounded-tr rounded-br shadow-md focus:outline-none"
+        className="absolute bottom-15 left-0 z-50 p-2 bg-white dark:bg-gray-800 border-r border-gray-300 dark:border-gray-700 rounded-tr rounded-br shadow-md focus:outline-none"
       >
         {isSidebarOpen ? (
           <FaUnlock size={20} className="text-indigo-800 dark:text-violet-600" />
