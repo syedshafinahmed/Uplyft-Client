@@ -96,16 +96,18 @@ npm run build
 
 ---
 
-## Upcoming Events Page
+## All Events Page
 
-<img width="full" alt="uplyft-upcoming-events" src="https://github.com/user-attachments/assets/8bc04505-9e9a-45db-9cc8-8c18a861697d" /> <br>
+<img width="full" alt="Uplyft-All-Events" src="https://github.com/user-attachments/assets/2977b549-efb9-443e-b86d-125ca0c54ff8" /> <br>
 
-- Shows only upcoming events, automatically filtering out past ones using **backend-side date validation**
-- Feature-rich event cards displaying all essential details —
-Thumbnail, Title, Location, Event Type, Event Date, Created By and a View Event button leading to the full event details page.
-- Includes a case-sensitive **Search Bar**, allowing users to look up events by matching exact titles.
-- Comes with an **Event Type** filter dropdown, enabling users to quickly sort events by categories like Cleanup, Plantation, Donation, and more.
-- All events are presented in a **fully responsive** grid layout, ensuring a smooth browsing experience across mobile, tablet, and desktop.
+
+- Fetches and filters events from API with live search and event type filter (**REST API + fetch**)  
+- Supports client-side pagination for smooth browsing (**React state + array slicing**)  
+- Skeleton loading UI while fetching data (**Tailwind CSS + Animate Pulse**)  
+- Responsive grid layout for event cards using **Tailwind CSS grid**  
+- Interactive search input with keyboard enter support and filter dropdown  
+- Styled buttons with hover, disabled, and active states (**Tailwind CSS**)  
+- Dark/light theme support implemented using **Tailwind CSS dark mode**  
 
 ---
 
