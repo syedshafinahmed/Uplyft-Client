@@ -153,24 +153,19 @@ npm run build
    - Minimum of 6 characters
 - **Forgot Password** feature sends a secure reset link to the registered email.
 - **Interactive Feedback:** All success and error states are displayed using **SweetAlert**, ensuring smooth and clear communication with users.
-- **Protected Routes:** Users cannot access private pages **(Create Event, Manage Events, Joined Events)** without logging in.
+- **Protected Routes:** Users cannot access private pages **(Dashboard, Profile)** without logging in.
 
 ---
 
-## Profile Picture
+## Profile Page
 
-<div align="center">
-  <img alt="uplyft-home" src="https://github.com/user-attachments/assets/9f7d4823-fe45-40d8-a71a-2731c0ec8b66" style="width: 44%"/> &nbsp;&nbsp;
-  <img alt="uplyft-home" src="https://github.com/user-attachments/assets/a8339d85-6877-4587-a32f-5de607bfdb75" style="width: 44%"/>
-</div> <br>
+<img width="full" alt="Uplyft-Profile" src="https://github.com/user-attachments/assets/d57c172f-c776-4dfc-8715-bb8a01294391" /> <br>
 
-- The **Profile Picture** in the navbar acts as a dropdown menu, giving quick access to user-specific options.
-- Displays private route links for:
-   - Create Event
-   - Manage Events
-   - Joined Events
-- Includes a **Light/Dark Mode** toggle button for instant theme switching.
-- Hovering over the profile picture reveals the user’s Name, enhancing personalization.
+- Animated circular border around the avatar for visual enhancement (**Tailwind CSS + custom keyframe animation**)  
+- Allows inline editing of the display name with save functionality (**React useState + conditional rendering**)  
+- Updates Firebase user profile in real-time (**Firebase Auth + updateProfile**)  
+- Provides visual feedback for success or failure using modals (**SweetAlert2**)  
+- Includes loading state and disabled buttons during API calls (**React useState**)  
 
 ---
 
