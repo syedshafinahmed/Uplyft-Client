@@ -124,18 +124,15 @@ npm run build
 
 ## Event Details Page 
 
-<img width="full" alt="uplyft-event-details" src="https://github.com/user-attachments/assets/edebd896-640d-4adc-ac4a-60daf1b01ee7" /> <br>
+<img width="full" alt="Uplyft-Event-Details" src="https://github.com/user-attachments/assets/9598cb8c-a925-4057-a365-6690ac1d16ab" />  <br>
 
-- The event details page is publicly accessible, allowing anyone to explore complete event information — including the event creator’s details, date, location, type, and description.
-- Features a prominent **Join This Event** button, but joining is available only for **authenticated users**.
-- If a user attempts to join without signing in, they are redirected to the **Login page**, and upon successful authentication, automatically returned to the same event page.
-- Once logged in, users can join the event, and the system stores the joined event data in the **database** along with user info.
-- A **confirmation alert** is shown upon successful joining.
-- Users cannot join the same event twice — the button becomes **disabled** after the first join.
-- Joined events seamlessly appear in the user’s **Joined Events** page, sorted by upcoming date.
-
-
-*If the user is not logged in → Redirects to Login and then back to Details Page after login.*
+- Displays full event details including title, description, image, and attributes   
+- Shows event type, date, location, and creator with icons  
+- Checks if a user has already joined the event and updates button state dynamically (**React useState + useEffect**)  
+- Allows logged-in users to join events with API integration (**REST API + fetch + AuthContext**)  
+- Provides feedback for actions using modals (**SweetAlert2**)  
+- Fetches and displays similar events based on event type (**REST API + fetch**)  
+- Skeleton loader improves perceived performance while fetching data (**Tailwind CSS + Animate Pulse**)  
 
 ---
 
