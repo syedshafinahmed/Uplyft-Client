@@ -62,21 +62,21 @@ const Register = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div data-aos="fade-up" className="card bg-base-200 w-full border-2 border-indigo-800 max-w-sm shrink-0 shadow-2xl">
+      <div data-aos="fade-up" className="card bg-base-200 w-full border border-indigo-800 dark:border-violet-600 max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
-          <h1 className='text-[26px] pb-2 text-center font-black bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent'>Unite, Upgrade, Uplyft.</h1>
+          <h1 className='text-[26px] pb-2 text-center font-black text-indigo-800 dark:text-violet-600'>Unite, Upgrade, Uplyft.</h1>
           <form onSubmit={handleRegister}>
             <fieldset className="fieldset">
               <label className="label">Name</label>
-              <input type="text" name="displayName" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Name" />
+              <input type="text" name="displayName" className="input rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600" placeholder="Name" />
               <label className="label">Email</label>
-              <input type="email" name="email" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Email" />
+              <input type="email" name="email" className="input rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600" placeholder="Email" />
               <label className="label">Photo URL</label>
-              <input type="text" name="photoURL" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Photo URL" />
+              <input type="text" name="photoURL" className="input rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600" placeholder="Photo URL" />
               <label className="label">Password</label>
               <div className="relative">
-                <input type={showPassword ? "text" : "password"} className="input rounded-full focus:border-0 focus:outline-indigo-800" name="password" onChange={handlePasswordChange} placeholder="Password" />
-                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-violet-500">
+                <input type={showPassword ? "text" : "password"} className="input rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600" name="password" onChange={handlePasswordChange} placeholder="Password" />
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-indigo-900 dark:text-violet-600">
                   {showPassword ? (
                     <PiEyeDuotone size={15} />
                   ) : (
@@ -91,7 +91,7 @@ const Register = () => {
                   {passwordError}
                 </p>
               )}
-              <p className='mt-2 text-center'>Already have an account? <NavLink to='/login' className='text-indigo-800 font-bold'>Login</NavLink></p>
+              <p className='mt-2 text-center'>Already have an account?  <NavLink to='/login' className='text-indigo-800 dark:text-violet-600 font-bold'> Login</NavLink></p>
             </fieldset>
           </form>
         </div>
