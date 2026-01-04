@@ -157,6 +157,20 @@ npm run build
 
 ---
 
+## Dashboard Page (Private Route)
+
+<img width="full" alt="Uplyft_Dashboard" src="https://github.com/user-attachments/assets/c22fc8b8-b573-40f5-88b1-8030ef0bd6e6" /> <br>
+
+- Displays a personalized greeting with the user’s name 
+- Shows count cards for Events Created, Events Joined, and Upcoming Events with animated counters **(React useState + useEffect + CountUp)**
+- Fetches and displays **Latest Created and Next Scheduled Event** using the reusable EventCard component **(React + fetch + Promise.all)**
+- Provides quick navigation links to all relevant pages 
+- Animated count-up numbers for metrics for smooth visual feedback **(useEffect + setInterval)**
+- Displays skeleton loaders while fetching data to indicate loading state **(animate-pulse)**
+- Tooltip guidance for icons to improve usability **(Material UI Tooltip)**
+
+---
+
 ## Profile Page (Private Route)
 
 <img width="full" alt="Uplyft-Profile" src="https://github.com/user-attachments/assets/d57c172f-c776-4dfc-8715-bb8a01294391" /> <br>
