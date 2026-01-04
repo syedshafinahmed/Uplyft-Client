@@ -6,7 +6,7 @@ Uplyft – A community-driven event management platform where users can discover
 
 ## 🌐 Live Demo
 
-https://uplyft-syedshafinahmed.netlify.app/
+https://uplyft.pages.dev/
 
 ---
 
