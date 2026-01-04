@@ -170,9 +170,9 @@ npm run build
 ---
 
 
-## Create Event Page (Private Route)
+## Create Event Page 
 
-<img width="full" alt="uplyft-create-events" src="https://github.com/user-attachments/assets/b862d6ec-c16c-49d2-bcf7-69e02b514959" /> <br>
+<img width="full" alt="Uplyft-Create-Event" src="https://github.com/user-attachments/assets/2b71bb81-04d7-4a9f-afaa-4eea93434a1e" /> <br>
 
 - Accessible only to **Logged-in Users**, ensuring secure event creation.
 - Users can enter: Title, Description, Event Type (Cleanup, Plantation, Donation, etc.), Thumbnail Image URL, Location, Future Event Date (validated using **react-datepicker**; past dates cannot be selected).
