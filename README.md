@@ -111,6 +111,17 @@ npm run build
 
 ---
 
+## Upcoming Events Page
+
+<img width="full" alt="Uplyft-Upcoming-Events" src="https://github.com/user-attachments/assets/915fc833-b6d4-4935-9e80-73a6909c8d8f" />  <br>
+
+- Skeleton loader while fetching data to improve perceived performance (**Tailwind CSS + Animate Pulse**)  
+- Shows a limited number of upcoming events for quick overview (slice method in React)  
+- Includes a "View All Events" link to navigate to full events list (**React Router Link**)  
+- Fully responsive design with dark/light theme support (**Tailwind CSS dark mode**)  
+
+---
+
 ## Event Details Page 
 
 <img width="full" alt="uplyft-event-details" src="https://github.com/user-attachments/assets/edebd896-640d-4adc-ac4a-60daf1b01ee7" /> <br>
