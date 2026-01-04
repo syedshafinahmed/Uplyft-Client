@@ -157,7 +157,7 @@ npm run build
 
 ---
 
-## Profile Page
+## Profile Page (Private Route)
 
 <img width="full" alt="Uplyft-Profile" src="https://github.com/user-attachments/assets/d57c172f-c776-4dfc-8715-bb8a01294391" /> <br>
 
@@ -170,7 +170,7 @@ npm run build
 ---
 
 
-## Create Event Page 
+## Create Event Page (Private Route)
 
 <img width="full" alt="Uplyft-Create-Event" src="https://github.com/user-attachments/assets/2b71bb81-04d7-4a9f-afaa-4eea93434a1e" /> <br>
 
@@ -185,13 +185,11 @@ npm run build
 
 ## Joined Events Page (Private Route)
 
-<img width="full" alt="uplyft-joined-events" src="https://github.com/user-attachments/assets/4b463d59-0e93-448f-8c3b-f47b518600d4" /> <br>
+<img width="full" alt="Uplyft-Joined-Events" src="https://github.com/user-attachments/assets/ddd0924c-ebdd-4e03-8591-2ef8baf76bfa" /> <br>
 
 - Displays all events joined by the **Logged-in User**.
 - Events are sorted by upcoming date, keeping the user’s schedule organized.
 - Joined events cannot be joined again, preventing duplicates.
-- Provides a clean, responsive card layout for easy browsing.
-- Allows users to **quickly navigate to event details** from their joined events list.
 
 ---
 
