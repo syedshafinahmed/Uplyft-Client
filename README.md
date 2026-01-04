@@ -64,13 +64,24 @@ npm run build
 
 ## About Page
 
-<img width="full" alt="Uplyft-About" src="https://github.com/user-attachments/assets/0f83e8ad-0060-4e47-90b4-46b643c72ad3" />
+<img width="full" alt="Uplyft-About" src="https://github.com/user-attachments/assets/0f83e8ad-0060-4e47-90b4-46b643c72ad3" /> <br>
 
 - Banner with overlay and animated title using **React + Framer Motion**  
 - Animated stats for events, participants, cities, and organizers using **React CountUp + Framer Motion**  
 - Multi-column success stories gallery with hover effects using **Framer Motion**  
 - Skeleton loading placeholders for smooth user experience using **React + Tailwind CSS**  
 - Smooth image hover scaling in gallery using **Tailwind CSS + Framer Motion**
+
+---
+
+## How It Works Page
+
+<img width="full" alt="Uplyft-How-It-Works" src="https://github.com/user-attachments/assets/8eeec87d-f26b-4fcb-bb9e-63b5b76a3720" /> <br>
+
+- Interactive step-by-step process using **React + Framer Motion**  
+- Clickable steps with animated transitions to highlight the current step using **Framer Motion**  
+- Morphing circular progress indicator showing step completion using **SVG + Framer Motion**  
+- Smooth enter/exit animations for step details using **AnimatePresence + Framer Motion**
 
 ---
 
