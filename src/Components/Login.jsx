@@ -81,18 +81,18 @@ const Login = () => {
 
   return (
     <div className="hero bg-base-200 min-h-screen">
-      <div data-aos="fade-up" className="card bg-base-200 border-2 border-indigo-800 w-full max-w-sm shrink-0 shadow-2xl">
+      <div data-aos="fade-up" className="card bg-base-200 border border-indigo-800 dark:border-violet-600 w-full max-w-sm shrink-0 shadow-2xl">
         <div className="card-body">
-          <h1 className='text-3xl pb-2 text-center font-black bg-linear-to-b from-indigo-800 to-violet-500 bg-clip-text text-transparent'>Time to Uplyft!</h1>
+          <h1 className='text-3xl pb-2 text-center font-black text-indigo-800 dark:text-violet-600'>Time to Uplyft!</h1>
           <form onSubmit={handleLogIn}>
             <fieldset className="fieldset">
               <label className="label">Email</label>
-              <input type="email" name="email" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Email" required />
+              <input type="email" name="email" className="input rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600" placeholder="Email" required />
 
               <label className="label">Password</label>
               <div className="relative">
-                <input type={showPassword ? "text" : "password"} name="password" className="input rounded-full focus:border-0 focus:outline-indigo-800" placeholder="Password" required />
-                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-violet-500">
+                <input type={showPassword ? "text" : "password"} name="password" className="input rounded-full focus:border-0 focus:outline-indigo-800 dark:focus:outline-violet-600" placeholder="Password" required />
+                <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute z-10 right-8 top-1/2 -translate-y-1/2 text-indigo-900 dark:text-violet-600">
                   {showPassword ? (
                     <PiEyeDuotone size={15} />
                   ) : (
@@ -100,9 +100,9 @@ const Login = () => {
                   )}
                 </button>
               </div>
-              <div className='flex justify-center mt-3'><a className="link link-hover text-indigo-800">Forgot password?</a></div>
+              <div className='flex font-bold justify-center mt-3'><a className="link link-hover text-indigo-800 dark:text-violet-600">Forgot password?</a></div>
 
-              <button onClick={handleGoogleSignIn} className="btn text-base border border-indigo-800 text-indigo-800 mt-3 rounded-full">
+              <button onClick={handleGoogleSignIn} className="btn text-base border border-indigo-800 dark:border-violet-600 text-indigo-800 dark:text-violet-600 mt-3 rounded-full">
                 <div className='flex items-center gap-3'>
                   <FaGoogle />
                   <span>Continue with Google</span>
@@ -110,7 +110,7 @@ const Login = () => {
               </button>
 
               <button className="btn rounded-full text-base bg-linear-to-b from-indigo-800 to-violet-500 text-base-200 mt-3">Login</button>
-              <p className='mt-2 text-center'>Don't have an account? <NavLink to='/register' className='text-indigo-800 font-bold'>Register</NavLink></p>
+              <p className='mt-2 text-center'>Don't have an account? <NavLink to='/register' className='text-indigo-800 dark:text-violet-600 font-bold'>Register</NavLink></p>
             </fieldset>
           </form>
         </div>
