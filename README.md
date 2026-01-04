@@ -85,6 +85,17 @@ npm run build
 
 ---
 
+## Contact Page
+
+<img width="full" alt="Uplyft-Contact" src="https://github.com/user-attachments/assets/45858e67-5a71-41a0-a43e-8b004b0bd0e6" /> <br>
+
+- Animated info card with opening hours, contact details, and icons using **Framer Motion + React Icons**  
+- Floating background elements with subtle bounce animation using **CSS keyframes**  
+- Dark/light theme support implemented with **Tailwind CSS dark mode**  
+- Smooth enter animations for info card and form on scroll using **Framer Motion**
+
+---
+
 ## Upcoming Events Page
 
 <img width="full" alt="uplyft-upcoming-events" src="https://github.com/user-attachments/assets/8bc04505-9e9a-45db-9cc8-8c18a861697d" /> <br>
