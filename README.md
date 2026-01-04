@@ -196,15 +196,11 @@ npm run build
 
 ## Manage Events Page (Private Route)
 
-<div align="center">
-  <img alt="uplyft-manage-events" src="https://github.com/user-attachments/assets/16096288-507a-4f33-9a3b-1673e3836503" style="width: 44%"/> &nbsp;&nbsp;
-  <img alt="uplyft-update-events" src="https://github.com/user-attachments/assets/14518fed-bc37-4cfb-a8e2-de23eacaa5df" style="width: 44%"/>
-</div> <br>
+<img width="full" alt="Uplyft-Manage-Events" src="https://github.com/user-attachments/assets/79d2168c-a7a6-47ce-83cb-fae387a967ff" /> <br>
 
 - Shows all events created by the **Logged-in User**.
-- Users can update event details such as title, description, type, date, location, or image.
+- Users can **update and view** event details such as title, description, type, date, location, or image.
 - Ensures ownership validation, so no user can **modify or delete someone else’s events**.
-- Responsive layout with action buttons for editing events, ensuring easy management of all created events.
 
 ---
 
