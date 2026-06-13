@@ -4,13 +4,10 @@ Uplyft – A community-driven event management platform where users can discover
 
 ---
 
-## 🌐 Live Demo
+### [🔗 Live Demo](https://uplyft.pages.dev/) | [⚙️ Backend Architecture](https://github.com/syedshafinahmed/Uplyft-Server)
 
-https://uplyft.pages.dev/
 
----
-
-## 🔗 Installation & Setup
+## 🛠️ Installation & Setup
 
 #### 1. Clone the repository
 
